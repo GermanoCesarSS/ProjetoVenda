@@ -45,7 +45,7 @@ namespace Aula_11_08
         {
             InitializeComponent();
             carregarTabela();
-            carregaAcesso();
+            carregaUf();
             
         }
 
@@ -62,19 +62,7 @@ namespace Aula_11_08
             comboBox1.DisplayMember = "sigla";
             comboBox1.ValueMember = "coduf";
         }
-        List<Acesso> aux1 = new List<Acesso>();
-        public void carregaAcesso()
-        {
-            C_Acesso cs = new C_Acesso();
-
-            aux1 = new List<Acesso>();
-
-            aux1 = cs.carregaDados();
-
-            comboBox1.DataSource = aux1;
-            comboBox1.DisplayMember = "nome";
-            comboBox1.ValueMember = "cod";
-        }
+        
 
         private void frmCadastroCliente_Load(object sender, EventArgs e)
         {
@@ -128,19 +116,11 @@ namespace Aula_11_08
             txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             
         }
-
-      
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            //FrmRelProfessor frmrelprof = new FrmRelProfessor();
-            //frmrelprof.ShowDialog();
-        }
         
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicao = comboBox1.SelectedIndex;
-            label3.Text = aux1[posicao].Cod.ToString();
+            label3.Text = aux[posicao].Coduf.ToString();
         }
     }
 }

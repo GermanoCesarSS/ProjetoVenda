@@ -50,5 +50,10 @@ namespace Projeto_Venda_2023
             frmCadastroCidades cadcidade = new frmCadastroCidades();
             cadcidade.ShowDialog();
         }
+
+        private void bASEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

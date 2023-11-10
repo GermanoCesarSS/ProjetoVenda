@@ -20,3 +20,15 @@ C:\Users\Germano\Desktop\funec\4°SEMESTRE\ProjetoVenda-main\Projeto_Venda 2023\
 C:\Users\Germano\Desktop\funec\4°SEMESTRE\ProjetoVenda-main\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.csproj.CoreCompileInputs.cache
 C:\Users\Germano\Desktop\funec\4°SEMESTRE\ProjetoVenda-main\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.exe
 C:\Users\Germano\Desktop\funec\4°SEMESTRE\ProjetoVenda-main\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.pdb
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Debug\Projeto_Venda 2023.exe.config
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Debug\Projeto_Venda 2023.exe
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Debug\Projeto_Venda 2023.pdb
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.csproj.AssemblyReference.cache
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.FrmPrincipal.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.Properties.Resources.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Aula_11_08.frmCadastroCidades.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.csproj.GenerateResource.cache
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.csproj.CoreCompileInputs.cache
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.exe
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.pdb
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.frmBase.resources
