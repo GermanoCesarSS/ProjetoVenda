@@ -123,5 +123,11 @@ namespace Projeto_Venda_2023.view
             novo = false;
             txtNome.Focus();
         }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            frmRelatorios frm = new frmRelatorios(acessos);
+            frm.ShowDialog();
+        }
     }
 }

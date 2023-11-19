@@ -230,6 +230,7 @@
             this.btnRelatorio.Size = new System.Drawing.Size(29, 24);
             this.btnRelatorio.Text = "toolStripButton1";
             this.btnRelatorio.ToolTipText = "Gerar Relatório";
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
             // toolStripButton1
             // 
