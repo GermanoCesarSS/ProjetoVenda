@@ -15,9 +15,12 @@ namespace Projeto_Venda_2023.controller
     {
         SqlConnection con;
         SqlCommand cmd;
+        SqlDataAdapter da;
+        DataTable acessos;
         string sqlApagar = "delete from acesso where cod = @Id";
         string sqlTodos = "select * from acesso order by nome";
         string sqlInsere = "insert into acesso (nome) values (@Nome)";
+        string sqlEditar = "update acesso set nome = @Nome where cod = @Id";
         public void apagaDados(int cod)
         {
             ConectaBanco cb = new ConectaBanco();
@@ -44,10 +47,6 @@ namespace Projeto_Venda_2023.controller
             }
         }
 
-        public DataTable buscarTodos()
-        {
-            throw new NotImplementedException();
-        }
         public List<Acesso> carregaDados()
         {
             List<Acesso> lista_Acesso = new List<Acesso>();
@@ -103,6 +102,67 @@ namespace Projeto_Venda_2023.controller
             {
                 con.Close();
             }
+
+        }
+        public void editaDados(object obj)
+        {
+            Acesso acesso = new Acesso();
+            acesso = (Acesso)obj;
+            ConectaBanco cb = new ConectaBanco();
+            con = cb.conectaSqlServer();
+            cmd = new SqlCommand(sqlEditar, con);
+            cmd.Parameters.AddWithValue("@Id", acesso.Cod);
+            cmd.Parameters.AddWithValue("@Nome", acesso.Nome);
+            cmd.CommandType = CommandType.Text;
+            con.Open();
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0) MessageBox.Show("Registro editado com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public DataTable buscarTodosNormalizados()
+        {
+
+
+            ConectaBanco conectaBanco = new ConectaBanco();
+            con = conectaBanco.conectaSqlServer();
+
+
+
+            //cria o objeto command para executar a instruçao sql
+            cmd = new SqlCommand(sqlTodos, con);
+            //abre a conexao
+            con.Open();
+            //define o tipo do comando
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                //cria um dataadapter
+                da = new SqlDataAdapter(cmd);
+                //cria um objeto datatable
+                acessos = new DataTable();
+                //preenche o datatable via dataadapter
+                da.Fill(acessos);
+            }
+            catch
+            {
+                acessos = null;
+            }
+            return acessos;
+
+        }
+        public DataTable buscarTodos()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Aula_11_08;
 using Projeto_Venda_2023.controller;
 using Projeto_Venda_2023.model;
+using Projeto_Venda_2023.view;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Projeto_Venda_2023
         public FrmPrincipal()
         {
             InitializeComponent();
-            carregaSexo();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,6 +55,22 @@ namespace Projeto_Venda_2023
         private void bASEToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void baseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void aCESSOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAcesso frm = new frmAcesso();
+            frm.ShowDialog();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

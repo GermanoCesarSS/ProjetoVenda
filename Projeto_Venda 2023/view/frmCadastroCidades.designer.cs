@@ -63,7 +63,7 @@
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(16, 68);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(132, 22);
@@ -73,7 +73,7 @@
             // 
             this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Location = new System.Drawing.Point(157, 68);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(457, 22);
@@ -122,7 +122,7 @@
             this.tsbSalvar.Image = ((System.Drawing.Image)(resources.GetObject("tsbSalvar.Image")));
             this.tsbSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSalvar.Name = "tsbSalvar";
-            this.tsbSalvar.Size = new System.Drawing.Size(29, 24);
+            this.tsbSalvar.Size = new System.Drawing.Size(29, 28);
             this.tsbSalvar.Text = "toolStripButton1";
             this.tsbSalvar.ToolTipText = "Salvar Cliente";
             this.tsbSalvar.Click += new System.EventHandler(this.tsbSalvar_Click);
@@ -133,7 +133,7 @@
             this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
             this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(29, 24);
+            this.tsbCancelar.Size = new System.Drawing.Size(29, 28);
             this.tsbCancelar.Text = "toolStripButton1";
             this.tsbCancelar.ToolTipText = "Cancelar";
             // 
@@ -143,7 +143,7 @@
             this.tsbExcluir.Image = ((System.Drawing.Image)(resources.GetObject("tsbExcluir.Image")));
             this.tsbExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExcluir.Name = "tsbExcluir";
-            this.tsbExcluir.Size = new System.Drawing.Size(29, 24);
+            this.tsbExcluir.Size = new System.Drawing.Size(29, 28);
             this.tsbExcluir.Text = "toolStripButton1";
             this.tsbExcluir.ToolTipText = "Excluir Registro";
             this.tsbExcluir.Click += new System.EventHandler(this.tsbExcluir_Click);
@@ -151,19 +151,19 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // lblBuscaId
             // 
             this.lblBuscaId.Name = "lblBuscaId";
-            this.lblBuscaId.Size = new System.Drawing.Size(99, 24);
+            this.lblBuscaId.Size = new System.Drawing.Size(99, 28);
             this.lblBuscaId.Text = "Buscar por Id:";
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(239, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(239, 31);
             // 
             // btnBuscar
             // 
@@ -171,14 +171,14 @@
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(29, 24);
+            this.btnBuscar.Size = new System.Drawing.Size(29, 28);
             this.btnBuscar.Text = "toolStripButton1";
             this.btnBuscar.ToolTipText = "Buscar Cliente";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // btnPrimeiro
             // 
@@ -186,7 +186,7 @@
             this.btnPrimeiro.Image = ((System.Drawing.Image)(resources.GetObject("btnPrimeiro.Image")));
             this.btnPrimeiro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPrimeiro.Name = "btnPrimeiro";
-            this.btnPrimeiro.Size = new System.Drawing.Size(29, 24);
+            this.btnPrimeiro.Size = new System.Drawing.Size(29, 28);
             this.btnPrimeiro.Text = "toolStripButton1";
             this.btnPrimeiro.ToolTipText = "Primeiro Registro";
             // 
@@ -196,7 +196,7 @@
             this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
             this.btnAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(29, 24);
+            this.btnAnterior.Size = new System.Drawing.Size(29, 28);
             this.btnAnterior.Text = "Registro Anterior";
             // 
             // btnProximo
@@ -205,7 +205,7 @@
             this.btnProximo.Image = ((System.Drawing.Image)(resources.GetObject("btnProximo.Image")));
             this.btnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(29, 24);
+            this.btnProximo.Size = new System.Drawing.Size(29, 28);
             this.btnProximo.Text = "toolStripButton1";
             this.btnProximo.ToolTipText = "Próximo Registro";
             // 
@@ -215,14 +215,14 @@
             this.btnUltimo.Image = ((System.Drawing.Image)(resources.GetObject("btnUltimo.Image")));
             this.btnUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUltimo.Name = "btnUltimo";
-            this.btnUltimo.Size = new System.Drawing.Size(29, 24);
+            this.btnUltimo.Size = new System.Drawing.Size(29, 28);
             this.btnUltimo.Text = "toolStripButton1";
             this.btnUltimo.ToolTipText = "Último Registro";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // btnRelatorio
             // 
@@ -230,7 +230,7 @@
             this.btnRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorio.Image")));
             this.btnRelatorio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(29, 24);
+            this.btnRelatorio.Size = new System.Drawing.Size(29, 28);
             this.btnRelatorio.Text = "toolStripButton1";
             this.btnRelatorio.ToolTipText = "Gerar Relatório";
             // 
@@ -240,7 +240,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // label1
@@ -267,7 +267,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 165);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -313,7 +313,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(637, 68);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(123, 24);
             this.comboBox1.TabIndex = 20;
@@ -346,7 +346,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmCadastroCidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

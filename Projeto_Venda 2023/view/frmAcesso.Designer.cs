@@ -1,6 +1,6 @@
-﻿namespace Projeto_Venda_2023
+﻿namespace Projeto_Venda_2023.view
 {
-    partial class frmBase
+    partial class frmAcesso
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBase));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAcesso));
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNovo = new System.Windows.Forms.ToolStripButton();
             this.tsbSalvar = new System.Windows.Forms.ToolStripButton();
@@ -46,10 +48,32 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnRelatorio = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Id";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(36, 83);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(132, 22);
+            this.txtId.TabIndex = 26;
+            this.txtId.Text = "0";
             // 
             // toolStrip1
             // 
@@ -74,7 +98,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 27);
-            this.toolStrip1.TabIndex = 9;
+            this.toolStrip1.TabIndex = 25;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbNovo
@@ -86,6 +110,7 @@
             this.tsbNovo.Size = new System.Drawing.Size(29, 24);
             this.tsbNovo.Text = "toolStripButton1";
             this.tsbNovo.ToolTipText = "Adicionar Novo Cliente";
+            this.tsbNovo.Click += new System.EventHandler(this.tsbNovo_Click);
             // 
             // tsbSalvar
             // 
@@ -96,6 +121,7 @@
             this.tsbSalvar.Size = new System.Drawing.Size(29, 24);
             this.tsbSalvar.Text = "toolStripButton1";
             this.tsbSalvar.ToolTipText = "Salvar Cliente";
+            this.tsbSalvar.Click += new System.EventHandler(this.tsbSalvar_Click);
             // 
             // tsbCancelar
             // 
@@ -106,6 +132,7 @@
             this.tsbCancelar.Size = new System.Drawing.Size(29, 24);
             this.tsbCancelar.Text = "toolStripButton1";
             this.tsbCancelar.ToolTipText = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // tsbExcluir
             // 
@@ -116,6 +143,7 @@
             this.tsbExcluir.Size = new System.Drawing.Size(29, 24);
             this.tsbExcluir.Text = "toolStripButton1";
             this.tsbExcluir.ToolTipText = "Excluir Registro";
+            this.tsbExcluir.Click += new System.EventHandler(this.tsbExcluir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -130,6 +158,7 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(239, 27);
             // 
@@ -211,37 +240,50 @@
             this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
-            // label1
+            // dataGridView1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 16);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Id";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 218);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 220);
+            this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtId
+            // txtNome
             // 
-            this.txtId.Location = new System.Drawing.Point(28, 76);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(132, 22);
-            this.txtId.TabIndex = 22;
+            this.txtNome.Location = new System.Drawing.Point(242, 83);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(166, 22);
+            this.txtNome.TabIndex = 29;
             // 
-            // frmBase
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(239, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Nome";
+            // 
+            // frmAcesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "frmBase";
-            this.Text = "frmBase";
+            this.Name = "frmAcesso";
+            this.Text = "frmAcesso";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,6 +291,8 @@
 
         #endregion
 
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbNovo;
         private System.Windows.Forms.ToolStripButton tsbSalvar;
@@ -266,7 +310,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnRelatorio;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label2;
     }
 }

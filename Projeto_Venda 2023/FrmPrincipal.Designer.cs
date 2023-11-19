@@ -33,9 +33,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aCESSOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bASEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(668, 501);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(237, 24);
             this.comboBox1.TabIndex = 0;
@@ -51,7 +52,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(933, 498);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 1;
@@ -74,7 +75,8 @@
             // arquivoToolStripMenuItem
             // 
             this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem});
+            this.sairToolStripMenuItem,
+            this.baseToolStripMenuItem1});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
@@ -82,31 +84,39 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(127, 26);
+            this.sairToolStripMenuItem.Text = "SAIR";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // baseToolStripMenuItem1
+            // 
+            this.baseToolStripMenuItem1.Name = "baseToolStripMenuItem1";
+            this.baseToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
+            this.baseToolStripMenuItem1.Text = "BASE";
+            this.baseToolStripMenuItem1.Click += new System.EventHandler(this.baseToolStripMenuItem1_Click);
             // 
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cidadesToolStripMenuItem,
-            this.bASEToolStripMenuItem});
+            this.aCESSOToolStripMenuItem,
+            this.cidadesToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
+            // aCESSOToolStripMenuItem
+            // 
+            this.aCESSOToolStripMenuItem.Name = "aCESSOToolStripMenuItem";
+            this.aCESSOToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.aCESSOToolStripMenuItem.Text = "ACESSO";
+            this.aCESSOToolStripMenuItem.Click += new System.EventHandler(this.aCESSOToolStripMenuItem_Click);
+            // 
             // cidadesToolStripMenuItem
             // 
             this.cidadesToolStripMenuItem.Name = "cidadesToolStripMenuItem";
-            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.cidadesToolStripMenuItem.Text = "Cidades";
+            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.cidadesToolStripMenuItem.Text = "CIDADE";
             this.cidadesToolStripMenuItem.Click += new System.EventHandler(this.cidadesToolStripMenuItem_Click);
-            // 
-            // bASEToolStripMenuItem
-            // 
-            this.bASEToolStripMenuItem.Name = "bASEToolStripMenuItem";
-            this.bASEToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.bASEToolStripMenuItem.Text = "BASE";
-            this.bASEToolStripMenuItem.Click += new System.EventHandler(this.bASEToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -117,7 +127,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
@@ -137,7 +147,8 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cidadesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bASEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aCESSOToolStripMenuItem;
     }
 }
 
