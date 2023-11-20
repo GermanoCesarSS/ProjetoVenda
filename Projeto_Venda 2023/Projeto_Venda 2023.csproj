@@ -70,14 +70,9 @@
     <Compile Include="controller\C_Bairro.cs" />
     <Compile Include="controller\C_Cep.cs" />
     <Compile Include="controller\C_Cidade.cs" />
-    <Compile Include="controller\C_Funcao.cs" />
     <Compile Include="controller\C_Loja.cs" />
-    <Compile Include="controller\C_Marca.cs" />
-    <Compile Include="controller\C_Operadora.cs" />
     <Compile Include="controller\C_Rua.cs" />
     <Compile Include="controller\C_Sexo.cs" />
-    <Compile Include="controller\C_Situacao.cs" />
-    <Compile Include="controller\C_Tipo.cs" />
     <Compile Include="controller\C_Trabalho.cs" />
     <Compile Include="controller\C_Uf.cs" />
     <Compile Include="controller\I_CRUD.cs" />
@@ -110,17 +105,41 @@
     <Compile Include="view\frmAcesso.Designer.cs">
       <DependentUpon>frmAcesso.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\frmBairro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmBairro.Designer.cs">
+      <DependentUpon>frmBairro.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmCadastroCidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\frmCadastroCidades.designer.cs">
+    <Compile Include="view\frmCadastroCidades.Designer.cs">
       <DependentUpon>frmCadastroCidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\frmRelatorios.cs">
+    <Compile Include="view\frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\frmRelatorios.Designer.cs">
-      <DependentUpon>frmRelatorios.cs</DependentUpon>
+    <Compile Include="view\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmSexo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmSexo.Designer.cs">
+      <DependentUpon>frmSexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\rltAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\rltAcesso.Designer.cs">
+      <DependentUpon>rltAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\rltCadastroCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\rltCadastroCidade.Designer.cs">
+      <DependentUpon>rltCadastroCidade.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -136,18 +155,34 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="relatorios\relatorioAcesso.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorioCidade.rdlc" />
     <EmbeddedResource Include="view\frmAcesso.resx">
       <DependentUpon>frmAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmBairro.resx">
+      <DependentUpon>frmBairro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmCadastroCidades.resx">
       <DependentUpon>frmCadastroCidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\frmRelatorios.resx">
-      <DependentUpon>frmRelatorios.cs</DependentUpon>
+    <EmbeddedResource Include="view\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmSexo.resx">
+      <DependentUpon>frmSexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\rltAcesso.resx">
+      <DependentUpon>rltAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\rltCadastroCidade.resx">
+      <DependentUpon>rltCadastroCidade.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Acesso.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.model.Cidade.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.model.Uf.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmAcesso.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmCadastroCidades.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

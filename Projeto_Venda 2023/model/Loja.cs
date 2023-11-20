@@ -11,7 +11,7 @@ namespace Projeto_Venda_2023.model
         public int Cod { get; set; }
         public String Nome { get; set; }
         public String CNPJ { get; set; }
-        public String NomeFantasia {  get; set; }
+        public String NomeFantasia { get; set; }
         public String RazaoSocial { get; set; }
         public Loja() { }
     }

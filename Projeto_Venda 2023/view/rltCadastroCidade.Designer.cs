@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Venda_2023.view
 {
-    partial class frmRelatorios
+    partial class rltCadastroCidade
     {
         /// <summary>
         /// Required designer variable.
@@ -34,26 +34,22 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_Venda_2023.relatorios.relatorioAcesso.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_Venda_2023.relatorios.relatorioCidade.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(961, 684);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // frmRelatorios
+            // rltCadastroCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 684);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmRelatorios";
-            this.Text = "frmRelatorios";
-            this.Load += new System.EventHandler(this.frmRelatorios_Load);
+            this.Name = "rltCadastroCidade";
+            this.Text = "rltCadastroCidade";
+            this.Load += new System.EventHandler(this.rltCadastroCidade_Load);
             this.ResumeLayout(false);
 
         }

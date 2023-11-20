@@ -20,11 +20,13 @@ namespace Projeto_Venda_2023.controller
         SqlCommand cmd;
         SqlDataAdapter da;
         DataTable cidades;
-        string sqlInsere = "insert into cidade(nomecidade, coduf_fk) values (@nomecidade, @coduf)";
-        string sqlTodosNormalizados = "select c.codcidade as Código, c.nomecidade as Cidade," +
-            " u.sigla as Sigla from cidade c, " +
-            "uf u where c.coduf_fk = u.coduf";
-        string sqlApagar = "delete from cidade where codcidade = @Id";
+
+        string sqlApagar = "delete from cidade where codcidade = @Cod";
+        string sqlInsere = "insert into cidade(nomecidade, coduf_fk) values (@Nome, @Coduf)";
+        string sqlEditar = "update cidade set nomecidade = @Nome, coduf_fk = @Coduf where codcidade = @Cod";
+        string sqlTodos = "select c.codcidade as Código, c.nomecidade as Cidade," +
+                          " u.sigla as Sigla from cidade c, " +
+                          "uf u where c.coduf_fk = u.coduf";
 
         public void apagaDados(int cod)
         {
@@ -33,7 +35,7 @@ namespace Projeto_Venda_2023.controller
             cmd = new SqlCommand(sqlApagar, con);
 
             //Passando parâmetros para a sentença SQL
-            cmd.Parameters.AddWithValue("@Id", cod);
+            cmd.Parameters.AddWithValue("@Cod", cod);
             cmd.CommandType = CommandType.Text;
             con.Open();
 
@@ -55,42 +57,6 @@ namespace Projeto_Venda_2023.controller
                 con.Close();
             }
         }
-
-        public DataTable buscarTodosNormalizados()
-        {
-           
-
-            ConectaBanco conectaBanco = new ConectaBanco();
-            con = conectaBanco.conectaSqlServer();
-
-
-            
-            //cria o objeto command para executar a instruçao sql
-            cmd = new SqlCommand(sqlTodosNormalizados, con);
-            //abre a conexao
-            con.Open();
-            //define o tipo do comando
-            cmd.CommandType = CommandType.Text;
-            try
-            {
-                //cria um dataadapter
-                da = new SqlDataAdapter(cmd);
-                //cria um objeto datatable
-                cidades = new DataTable();
-                //preenche o datatable via dataadapter
-                da.Fill(cidades);
-            }
-            catch {
-                cidades = null;
-            }
-             return cidades;
-            
-        }
-        public DataTable buscarTodos()
-        {
-            throw new NotImplementedException();
-        }
-
         public void insereDados(object obj)
         {
             Cidade cidade = new Cidade();
@@ -100,8 +66,8 @@ namespace Projeto_Venda_2023.controller
             con = cb.conectaSqlServer();
             cmd = new SqlCommand(sqlInsere, con);
 
-            cmd.Parameters.AddWithValue("@nomecidade", cidade.Nomecidade);
-            cmd.Parameters.AddWithValue("@coduf", cidade.Uf.Coduf);
+            cmd.Parameters.AddWithValue("@Nome", cidade.Nomecidade);
+            cmd.Parameters.AddWithValue("@Coduf", cidade.Uf.Coduf);
             cmd.CommandType = CommandType.Text;
             con.Open();
             try
@@ -120,6 +86,93 @@ namespace Projeto_Venda_2023.controller
             {
                 con.Close();
             }
+        }
+        public void editaDados(object obj)
+        {
+            Cidade cidade = new Cidade();
+            cidade = (Cidade)obj;
+            ConectaBanco cb = new ConectaBanco();
+            con = cb.conectaSqlServer();
+            cmd = new SqlCommand(sqlEditar, con);
+            cmd.Parameters.AddWithValue("@Cod", cidade.Codcidade);
+            cmd.Parameters.AddWithValue("@Nome", cidade.Nomecidade);
+            cmd.Parameters.AddWithValue("@Coduf",cidade.Uf.Coduf);
+            cmd.CommandType = CommandType.Text;
+            con.Open();
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0) MessageBox.Show("Registro editado com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public DataTable buscarTodos()
+        {
+            ConectaBanco conectaBanco = new ConectaBanco();
+            con = conectaBanco.conectaSqlServer();
+            //cria o objeto command para executar a instruçao sql
+            cmd = new SqlCommand(sqlTodos, con);
+            //abre a conexao
+            con.Open();
+            //define o tipo do comando
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                //cria um dataadapter
+                da = new SqlDataAdapter(cmd);
+                //cria um objeto datatable
+                cidades = new DataTable();
+                //preenche o datatable via dataadapter
+                da.Fill(cidades);
+            }
+            catch
+            {
+                cidades = null;
+            }
+            return cidades;
+        }
+
+        public List<Cidade> carregaDados()
+        {
+            List<Cidade> lista_cidade = new List<Cidade>();
+
+            ConectaBanco cb = new ConectaBanco();
+            con = cb.conectaSqlServer();
+            cmd = new SqlCommand(sqlTodos, con);
+
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataReader tabCidade; //Representa uma Tabela Virtual para a leitura de dados
+            con.Open();
+
+
+            try
+            {
+                tabCidade = cmd.ExecuteReader();
+                while (tabCidade.Read())
+                {
+                    Cidade aux = new Cidade();
+
+                    aux.Codcidade = Int32.Parse(tabCidade["codcidade"].ToString());
+                    aux.Nomecidade = tabCidade["nomecidade"].ToString();
+
+                    lista_cidade.Add(aux);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Vazio: \n {ex.ToString()}");
+            }
+            finally { con.Close(); }
+
+            return lista_cidade;
         }
     }
     

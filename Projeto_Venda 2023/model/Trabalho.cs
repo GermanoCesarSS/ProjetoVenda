@@ -10,6 +10,6 @@ namespace Projeto_Venda_2023.model
     {
         public int Cod { get; set; }
         public String Nome { get; set; }
-        public Trabalho () { }
+        public Trabalho() { }
     }
 }

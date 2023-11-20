@@ -5,122 +5,219 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using static System.Windows.Forms.LinkLabel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace Aula_11_08
+namespace Projeto_Venda_2023.view
 {
     public partial class frmCadastroCidades : Form
     {
-        bool novo;
         SqlConnection con;
         SqlCommand cmd;
         SqlDataAdapter da;
+
+        List<Uf> aux = new List<Uf>();
         DataTable cidades;
-        SqlDataReader tabCliente;
-        DataRow[] linhaAtual;
+        bool novo = false;
         int posicao = 0;
-      
-        //Carrega as informações no DatagridView1 com os dados dos clientes
+        //funções
+        //Carrega as informações no DatagridView1 com os dados das cidades
         public void carregarTabela()
         {
             C_Cidade cc = new C_Cidade();
             DataTable aux = new DataTable();
-            aux = cc.buscarTodosNormalizados();
+            aux = cc.buscarTodos();
             cidades = aux;
-           dataGridView1.DataSource = aux;
-
+            dataGridView1.DataSource = aux;
         }
-
+        public void carregaUf()
+        {
+            C_Uf cs = new C_Uf();
+            aux = new List<Uf>();
+            aux = cs.carregaDados();
+            comboBox1.DataSource = aux;
+            comboBox1.DisplayMember = "sigla";
+            comboBox1.ValueMember = "coduf";
+        }
         //Construtor da Classe frmCadastroCliente
         public frmCadastroCidades()
         {
             InitializeComponent();
             carregarTabela();
             carregaUf();
-            
+            txtNome.Focus();
+            txtNome.Enabled = false;
+            comboBox1.Enabled = false;
+            tsbSalvar.Enabled = false;
+            tsbCancelar.Enabled = false;
+            tsbExcluir.Enabled = false;
         }
-
-        List<Uf> aux = new List<Uf>();
-        public void carregaUf()
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            C_Uf cs = new C_Uf();
-
-            aux = new List<Uf>();
-
-            aux = cs.carregaDados();
-
-            comboBox1.DataSource = aux;
-            comboBox1.DisplayMember = "sigla";
-            comboBox1.ValueMember = "coduf";
+            posicao = comboBox1.SelectedIndex;
+            label3.Text = aux[posicao].Coduf.ToString();
         }
-        
-
-        private void frmCadastroCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void tsbNovo_Click(object sender, EventArgs e)
         {
+            txtNome.Enabled = true;
+            comboBox1.Enabled = true;
+            txtId.Text = "";
+            tsbSalvar.Enabled = true;
+            tsbCancelar.Enabled = true;
+            tsbExcluir.Enabled = true;
+            novo = true;
 
-          
+            txtNome.Focus();
         }
-
-        private void limpaCampos()
-        {
-           
-        }
-
         private void tsbSalvar_Click(object sender, EventArgs e)
         {
-            Cidade cidade = new Cidade
+            if (novo)
             {
-                Nomecidade = txtNome.Text
-,
-                Uf = aux[posicao]
-            };
-
-            C_Cidade cc = new C_Cidade();
-            cc.insereDados(cidade);
+                Cidade cidade = new Cidade
+                {
+                    Nomecidade = txtNome.Text,
+                    Uf = aux[posicao]
+                };
+                C_Cidade cc = new C_Cidade();
+                cc.insereDados(cidade);
+            }
+            else
+            {
+                Cidade cidade = new Cidade
+                {
+                    Codcidade = Int32.Parse(txtId.Text),
+                    Nomecidade = txtNome.Text,
+                    Uf = aux[posicao]
+                };
+                C_Cidade c_cidade = new C_Cidade();
+                c_cidade.editaDados(cidade);
+            }
             carregarTabela();
+            txtNome.Enabled = false;
+            comboBox1.Enabled = false;
+            txtNome.Clear();
+            txtId.Text = "0";
+            tsbSalvar.Enabled = false;
+            tsbCancelar.Enabled = false;
+            tsbExcluir.Enabled = false;
+            tsbNovo.Enabled = true;
         }
-
-        
         private void tsbExcluir_Click(object sender, EventArgs e)
         {
-            int codigo = Int32.Parse(txtId.Text.ToString());
             C_Cidade cc = new C_Cidade();
-            cc.apagaDados(codigo);
+            cc.apagaDados(Int32.Parse(txtId.Text));
             carregarTabela();
-
+            txtNome.Enabled = false;
+            comboBox1.Enabled = false;
+            txtNome.Clear();
+            txtId.Text = "0";
+            tsbSalvar.Enabled = false;
+            tsbCancelar.Enabled = false;
+            tsbExcluir.Enabled = false;
+            tsbNovo.Enabled = true;
         }
-
+        private void tsbCancelar_Click(object sender, EventArgs e)
+        {
+            txtNome.Enabled = false;
+            comboBox1.Enabled = false;
+            txtNome.Clear();
+            txtId.Text = "0";
+            tsbSalvar.Enabled = false;
+            tsbCancelar.Enabled = false;
+            tsbExcluir.Enabled = false;
+            tsbNovo.Enabled = true;
+        }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;// get the Row Index
             DataGridViewRow selectedRow = dataGridView1.Rows[index];
 
-
             txtId.Text = selectedRow.Cells[0].Value.ToString();
             //txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            tsbNovo.Enabled = false;
+            tsbCancelar.Enabled = true;
+            tsbSalvar.Enabled = true;
+            tsbExcluir.Enabled = true;
+            txtNome.Enabled = true;
+            comboBox1.Enabled = true;
+            novo = false;
+            txtNome.Focus();
         }
-        
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            posicao = comboBox1.SelectedIndex;
-            label3.Text = aux[posicao].Coduf.ToString();
+            try
+            {
+                string sqlBuscar = "SELECT cidade.CODCIDADE AS Codigo, cidade.NOMECIDADE AS Nome, UF.SIGLA AS Sigla" +
+                                    " FROM cidade" +
+                                    " INNER JOIN UF ON cidade.coduf_fk = UF.CODUF" +
+                                    " WHERE cidade.nomecidade LIKE @nome" +
+                                    " ORDER BY cidade.nomecidade;";
+                ConectaBanco cb = new ConectaBanco();
+                con = cb.conectaSqlServer();
+                cmd = new SqlCommand(sqlBuscar, con);
+                // Passando parâmetros para a sentença SQL
+                cmd.Parameters.AddWithValue("@nome", txtBuscar.Text + "%");
+                cmd.CommandType = CommandType.Text;
+                con.Open();
+                //*******carregando datagrid ***************************************8
+                //cria um dataadapter
+                da = new SqlDataAdapter(cmd);
+                //cria um objeto datatable
+                cidades = new DataTable();
+                //preenche o datatable via dataadapter
+                da.Fill(cidades);
+                //atribui o datatable ao datagridview para exibir o resultado
+                dataGridView1.DataSource = cidades;
+                //*******************fim do carregamento do datagrid
+                // Executar a leitura dos dados da cidade
+                SqlDataReader tabcidade = cmd.ExecuteReader();
+
+                if (tabcidade.Read())
+                {
+                    txtId.Text = tabcidade["Codigo"].ToString();
+                    txtNome.Text = tabcidade["Nome"].ToString();
+                    comboBox1.Text = tabcidade["Sigla"].ToString();
+
+                    // Ativar controle dos botões
+                    tsbNovo.Enabled = false;
+                    tsbSalvar.Enabled = true;
+                    tsbCancelar.Enabled = true;
+                    tsbExcluir.Enabled = true;
+                    txtNome.Enabled = true;
+                    comboBox1.Enabled = true;
+                    txtNome.Focus();
+                    novo = false;
+                }
+                else
+                {
+                    MessageBox.Show("Cidade não encontrada!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao buscar!!!\n\nErro: {ex.Message}\n\nStackTrace: {ex.StackTrace}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Certifique-se de fechar a conexão depois de utilizar
+                con.Close();
+            }
+            txtBuscar.Text = string.Empty;
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            rltCadastroCidade frm = new rltCadastroCidade(cidades);
+            frm.ShowDialog();
         }
     }
 }

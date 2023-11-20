@@ -95,6 +95,11 @@ namespace Projeto_Venda_2023.controller
             return lista_uf;
         }
 
+        public void editaDados(object obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public void insereDados(object obj)
         {
             Uf uf = new Uf();

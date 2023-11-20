@@ -1,5 +1,4 @@
-﻿using Aula_11_08;
-using Projeto_Venda_2023.controller;
+﻿using Projeto_Venda_2023.controller;
 using Projeto_Venda_2023.model;
 using Projeto_Venda_2023.view;
 using System;
@@ -22,44 +21,10 @@ namespace Projeto_Venda_2023
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmCadastroCidades frc = new frmCadastroCidades();
-            frc.ShowDialog();
-        }
-
-        public void carregaSexo()
-        {
-            C_Sexo cs = new C_Sexo();
-
-            List<Sexo> aux = new List<Sexo>();
-
-            aux = cs.carregaDados();
-
-            comboBox1.DataSource = aux;
-            comboBox1.DisplayMember = "nomesexo";
-            comboBox1.ValueMember = "codsexo";
-        }
-
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadastroCidades cadcidade = new frmCadastroCidades();
             cadcidade.ShowDialog();
-        }
-
-        private void bASEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void baseToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void aCESSOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,6 +36,18 @@ namespace Projeto_Venda_2023
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void sEXOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSexo frm = new frmSexo();
+            frm.ShowDialog();
+        }
+
+        private void bAIRROToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBairro frm = new frmBairro();
+            frm.ShowDialog();
         }
     }
 }

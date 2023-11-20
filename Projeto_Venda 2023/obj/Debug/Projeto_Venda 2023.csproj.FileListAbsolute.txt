@@ -26,7 +26,6 @@ C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Debug\Proj
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.csproj.AssemblyReference.cache
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.FrmPrincipal.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.Properties.Resources.resources
-C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Aula_11_08.frmCadastroCidades.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.csproj.GenerateResource.cache
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.csproj.CoreCompileInputs.cache
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.exe
@@ -84,5 +83,9 @@ C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Debug\pt\M
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmRelatorios.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda 2023.csproj.CopyComplete
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.rltAcesso.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.rltCadastroCidade.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmCadastroCidades.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmSexo.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmBairro.resources

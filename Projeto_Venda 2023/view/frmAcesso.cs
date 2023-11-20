@@ -27,7 +27,7 @@ namespace Projeto_Venda_2023.view
         {
             C_Acesso cc = new C_Acesso();
             DataTable aux = new DataTable();
-            aux = cc.buscarTodosNormalizados();
+            aux = cc.buscarTodos();
             acessos = aux;
             dataGridView1.DataSource = aux;
         }
@@ -42,6 +42,17 @@ namespace Projeto_Venda_2023.view
             tsbCancelar.Enabled = false;
             tsbExcluir.Enabled = false;
         }
+        private void tsbNovo_Click(object sender, EventArgs e)
+        {
+            txtNome.Enabled = true;
+            txtId.Text = "";
+            tsbSalvar.Enabled = true;
+            tsbCancelar.Enabled = true;
+            tsbExcluir.Enabled = true;
+            novo = true;
+
+            txtNome.Focus();
+        }
         private void tsbSalvar_Click(object sender, EventArgs e)
         {
             if (novo)
@@ -50,7 +61,6 @@ namespace Projeto_Venda_2023.view
                 {
                     Nome = txtNome.Text
                 };
-
                 C_Acesso cc = new C_Acesso();
                 cc.insereDados(acesso);
             }
@@ -73,17 +83,6 @@ namespace Projeto_Venda_2023.view
             tsbNovo.Enabled = true;
         }
 
-        private void tsbNovo_Click(object sender, EventArgs e)
-        {
-            txtNome.Enabled = true;
-            txtId.Text = "";
-            tsbSalvar.Enabled = true;
-            tsbCancelar.Enabled = true;
-            tsbExcluir.Enabled = true;
-            novo = true;
-
-            txtNome.Focus();
-        }
 
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
@@ -94,7 +93,6 @@ namespace Projeto_Venda_2023.view
             tsbCancelar.Enabled = false;
             tsbExcluir.Enabled = false;
             tsbNovo.Enabled = true;
-
         }
 
         private void tsbExcluir_Click(object sender, EventArgs e)
@@ -116,7 +114,6 @@ namespace Projeto_Venda_2023.view
             int index = e.RowIndex;// get the Row Index
             DataGridViewRow selectedRow = dataGridView1.Rows[index];
 
-
             txtId.Text = selectedRow.Cells[0].Value.ToString();
             //txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -131,51 +128,46 @@ namespace Projeto_Venda_2023.view
 
         private void btnRelatorio_Click(object sender, EventArgs e)
         {
-            frmRelatorios frm = new frmRelatorios(acessos);
+            rltAcesso frm = new rltAcesso(acessos);
             frm.ShowDialog();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string sqlBuscarId = "select * from acesso where nome LIKE @nome order by nome";
-            ConectaBanco cb = new ConectaBanco();
-            con = cb.conectaSqlServer();
-            cmd = new SqlCommand(sqlBuscarId, con);
-
-            //Passando parâmetros para a sentença SQL
-            cmd.Parameters.AddWithValue("@nome", txtBuscar.Text + "%");
-            cmd.CommandType = CommandType.Text;
-
-            SqlDataReader tabacesso;
-            con.Open();
-
-            //*******carregando datagrid ***************************************8
-            //cria um dataadapter
-            da = new SqlDataAdapter(cmd);
-            //cria um objeto datatable
-            acessos = new DataTable();
-            //preenche o datatable via dataadapter
-            da.Fill(acessos);
-            //atribui o datatable ao datagridview para exibir o resultado
-            dataGridView1.DataSource = acessos;
-            //*******************fim do carregamento do datagrid
             try
             {
+                string sqlBuscarId = "select * from acesso where nome LIKE @nome order by nome";
+                ConectaBanco cb = new ConectaBanco();
+                con = cb.conectaSqlServer();
+                cmd = new SqlCommand(sqlBuscarId, con);
+
+                //Passando parâmetros para a sentença SQL
+                cmd.Parameters.AddWithValue("@nome", txtBuscar.Text + "%");
+                cmd.CommandType = CommandType.Text;
+
+                SqlDataReader tabacesso;
+                con.Open();
+                //*******carregando datagrid ***************************************8
+                //cria um dataadapter
+                da = new SqlDataAdapter(cmd);
+                //cria um objeto datatable
+                acessos = new DataTable();
+                //preenche o datatable via dataadapter
+                da.Fill(acessos);
+                //atribui o datatable ao datagridview para exibir o resultado
+                dataGridView1.DataSource = acessos;
+                //*******************fim do carregamento do datagrid
                 tabacesso = cmd.ExecuteReader();
                 if (tabacesso.Read())
                 {
                     txtId.Text = tabacesso["Cod"].ToString();
                     txtNome.Text = tabacesso["Nome"].ToString();
-
-
                     //ativar controle dos botões
                     tsbNovo.Enabled = false;
                     tsbSalvar.Enabled = true;
                     tsbCancelar.Enabled = true;
                     tsbExcluir.Enabled = true;
-
                     txtNome.Enabled = true;
-
                     txtNome.Focus();
                     novo = false;
                 }

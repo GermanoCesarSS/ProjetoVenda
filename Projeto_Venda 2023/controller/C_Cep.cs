@@ -2,8 +2,8 @@
 using Projeto_Venda_2023.model;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,16 +15,21 @@ namespace Projeto_Venda_2023.controller
     {
         SqlConnection con;
         SqlCommand cmd;
-        string sqlApagar = "delete from cep where cod = @Id";
-        string sqlTodos = "select * from cep order by numero";
+        SqlDataAdapter da;
+        DataTable ceps;
+
+        string sqlApagar = "delete from cep where cod = @Cod";
         string sqlInsere = "insert into cep (numero) values (@Numero)";
+        string sqlEditar = "update cep set numero = @Numero where cod = @Cod";
+        string sqlTodos = "select * from cep order by numero";
+
         public void apagaDados(int cod)
         {
             ConectaBanco cb = new ConectaBanco();
             con = cb.conectaSqlServer();
             cmd = new SqlCommand(sqlApagar, con);
             //Passando parâmetros para a sentença SQL
-            cmd.Parameters.AddWithValue("@Id", cod);
+            cmd.Parameters.AddWithValue("@Cod", cod);
             cmd.CommandType = CommandType.Text;
             con.Open();
             try
@@ -32,7 +37,7 @@ namespace Projeto_Venda_2023.controller
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    MessageBox.Show($"Deletado com sucessp!!!\n Código: {cod}");
+                    MessageBox.Show($"Deletado com sucesso!!!\n Código: {cod}");
                 }
             }
             catch (Exception ex)
@@ -44,10 +49,84 @@ namespace Projeto_Venda_2023.controller
                 con.Close();
             }
         }
+        public void insereDados(object obj)
+        {
+            Cep cep = new Cep();
+            cep = (Cep)obj;
+            ConectaBanco cb = new ConectaBanco();
+            con = cb.conectaSqlServer();
+            cmd = new SqlCommand(sqlInsere, con);
+            cmd.Parameters.AddWithValue("@Numero", cep.Numero);
+            cmd.CommandType = CommandType.Text;
+            con.Open();
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0) MessageBox.Show("Registro incluído com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
 
+        }
+        public void editaDados(object obj)
+        {
+            Cep cep = new Cep();
+            cep = (Cep)obj;
+            ConectaBanco cb = new ConectaBanco();
+            con = cb.conectaSqlServer();
+            cmd = new SqlCommand(sqlEditar, con);
+            cmd.Parameters.AddWithValue("@Cod", cep.Cod);
+            cmd.Parameters.AddWithValue("@Numero", cep.Numero);
+            cmd.CommandType = CommandType.Text;
+            con.Open();
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0) MessageBox.Show("Registro editado com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         public DataTable buscarTodos()
         {
-            throw new NotImplementedException();
+
+            ConectaBanco conectaBanco = new ConectaBanco();
+            con = conectaBanco.conectaSqlServer();
+
+
+
+            //cria o objeto command para executar a instruçao sql
+            cmd = new SqlCommand(sqlTodos, con);
+            //abre a conexao
+            con.Open();
+            //define o tipo do comando
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                //cria um dataadapter
+                da = new SqlDataAdapter(cmd);
+                //cria um objeto datatable
+                ceps = new DataTable();
+                //preenche o datatable via dataadapter
+                da.Fill(ceps);
+            }
+            catch
+            {
+                ceps = null;
+            }
+            return ceps;
         }
         public List<Cep> carregaDados()
         {
@@ -80,30 +159,6 @@ namespace Projeto_Venda_2023.controller
                 con.Close();
             }
             return lista_Cep;
-        }
-        public void insereDados(object obj)
-        {
-            Cep cep = new Cep();
-            cep = (Cep)obj;
-            ConectaBanco cb = new ConectaBanco();
-            con = cb.conectaSqlServer();
-            cmd = new SqlCommand(sqlInsere, con);
-            cmd.Parameters.AddWithValue("@Numero", cep.Numero);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            try
-            {
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0) MessageBox.Show("Registro incluído com sucesso");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.ToString());
-            }
-            finally
-            {
-                con.Close();
-            }
         }
     }
 }

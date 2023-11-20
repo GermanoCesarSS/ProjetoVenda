@@ -41,14 +41,12 @@
             this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnTodos = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnRelatorio = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.btnTodos = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -172,6 +170,17 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // btnTodos
+            // 
+            this.btnTodos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnTodos.Image")));
+            this.btnTodos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(29, 24);
+            this.btnTodos.Text = "Listar todos";
+            this.btnTodos.ToolTipText = "Listar todos";
+            this.btnTodos.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -216,44 +225,11 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Nome";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(673, 190);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 16);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "TOTAL: ";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(728, 190);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(14, 16);
-            this.lblTotal.TabIndex = 32;
-            this.lblTotal.Text = "0";
-            // 
-            // btnTodos
-            // 
-            this.btnTodos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnTodos.Image")));
-            this.btnTodos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTodos.Name = "btnTodos";
-            this.btnTodos.Size = new System.Drawing.Size(29, 24);
-            this.btnTodos.Text = "Listar todos";
-            this.btnTodos.ToolTipText = "Listar todos";
-            this.btnTodos.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // frmAcesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dataGridView1);
@@ -261,6 +237,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmAcesso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAcesso";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -289,8 +266,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.ToolStripButton btnTodos;
     }
 }

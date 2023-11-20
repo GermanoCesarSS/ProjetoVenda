@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Projeto_Venda_2023.view
 {
-    public partial class frmRelatorios : Form
+    public partial class rltAcesso : Form
     {
         DataTable dt = new DataTable();
-        public frmRelatorios(DataTable dt)
+        public rltAcesso(DataTable dt)
         {
             InitializeComponent();
             this.dt = dt;

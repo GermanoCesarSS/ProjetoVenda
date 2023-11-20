@@ -10,7 +10,7 @@ namespace Projeto_Venda_2023.controller
     internal interface I_CRUD
     {
         void insereDados(Object obj);
-        //void editaDados(Object obj);
+        void editaDados(Object obj);
         void apagaDados(int cod);
         DataTable buscarTodos();
     }
