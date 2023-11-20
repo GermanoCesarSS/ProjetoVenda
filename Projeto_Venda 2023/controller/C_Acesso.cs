@@ -17,17 +17,19 @@ namespace Projeto_Venda_2023.controller
         SqlCommand cmd;
         SqlDataAdapter da;
         DataTable acessos;
-        string sqlApagar = "delete from acesso where cod = @Id";
-        string sqlTodos = "select * from acesso order by nome";
+
+        string sqlApagar = "delete from acesso where cod = @Cod";
         string sqlInsere = "insert into acesso (nome) values (@Nome)";
-        string sqlEditar = "update acesso set nome = @Nome where cod = @Id";
+        string sqlEditar = "update acesso set nome = @Nome where cod = @Cod";
+        string sqlTodos = "select * from acesso order by nome";
+        
         public void apagaDados(int cod)
         {
             ConectaBanco cb = new ConectaBanco();
             con = cb.conectaSqlServer();
             cmd = new SqlCommand(sqlApagar, con);
             //Passando parâmetros para a sentença SQL
-            cmd.Parameters.AddWithValue("@Id", cod);
+            cmd.Parameters.AddWithValue("@Cod", cod);
             cmd.CommandType = CommandType.Text;
             con.Open();
             try
@@ -35,7 +37,7 @@ namespace Projeto_Venda_2023.controller
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    MessageBox.Show($"Deletado com sucessp!!!\n Código: {cod}");
+                    MessageBox.Show($"Deletado com sucesso!!!\n Código: {cod}");
                 }
             }catch(Exception ex)
             {
@@ -45,39 +47,6 @@ namespace Projeto_Venda_2023.controller
             {
                 con.Close();
             }
-        }
-
-        public List<Acesso> carregaDados()
-        {
-            List<Acesso> lista_Acesso = new List<Acesso>();
-            ConectaBanco cb = new ConectaBanco();
-            SqlDataReader tabAcesso; //Representa uma Tabela Virtual para a leitura de dados
-
-            con = cb.conectaSqlServer();
-            cmd = new SqlCommand(sqlTodos, con);
-            cmd.CommandType = CommandType.Text;
-            con.Open();
-            try
-            {
-                tabAcesso = cmd.ExecuteReader();
-                while (tabAcesso.Read())
-                {
-                    Acesso aux = new Acesso();
-                    aux.Cod = Int32.Parse(tabAcesso["cod"].ToString());
-                    aux.Nome = tabAcesso["nome"].ToString();
-                    lista_Acesso.Add(aux);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar dados!\nErro:" + ex.ToString());
-            }
-            finally
-            {
-                con.Close();
-            }
-            return lista_Acesso;
         }
         public void insereDados(object obj)
         {
@@ -111,7 +80,7 @@ namespace Projeto_Venda_2023.controller
             ConectaBanco cb = new ConectaBanco();
             con = cb.conectaSqlServer();
             cmd = new SqlCommand(sqlEditar, con);
-            cmd.Parameters.AddWithValue("@Id", acesso.Cod);
+            cmd.Parameters.AddWithValue("@Cod", acesso.Cod);
             cmd.Parameters.AddWithValue("@Nome", acesso.Nome);
             cmd.CommandType = CommandType.Text;
             con.Open();
@@ -129,9 +98,8 @@ namespace Projeto_Venda_2023.controller
                 con.Close();
             }
         }
-        public DataTable buscarTodosNormalizados()
+        public DataTable buscarTodos()
         {
-
 
             ConectaBanco conectaBanco = new ConectaBanco();
             con = conectaBanco.conectaSqlServer();
@@ -158,11 +126,38 @@ namespace Projeto_Venda_2023.controller
                 acessos = null;
             }
             return acessos;
-
         }
-        public DataTable buscarTodos()
+        public List<Acesso> carregaDados()
         {
-            throw new NotImplementedException();
+            List<Acesso> lista_Acesso = new List<Acesso>();
+            ConectaBanco cb = new ConectaBanco();
+            SqlDataReader tabAcesso; //Representa uma Tabela Virtual para a leitura de dados
+
+            con = cb.conectaSqlServer();
+            cmd = new SqlCommand(sqlTodos, con);
+            cmd.CommandType = CommandType.Text;
+            con.Open();
+            try
+            {
+                tabAcesso = cmd.ExecuteReader();
+                while (tabAcesso.Read())
+                {
+                    Acesso aux = new Acesso();
+                    aux.Cod = Int32.Parse(tabAcesso["cod"].ToString());
+                    aux.Nome = tabAcesso["nome"].ToString();
+                    lista_Acesso.Add(aux);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados!\nErro:" + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            return lista_Acesso;
         }
     }
 }
