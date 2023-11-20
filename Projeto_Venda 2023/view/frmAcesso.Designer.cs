@@ -37,20 +37,18 @@
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblBuscaId = new System.Windows.Forms.ToolStripLabel();
+            this.lblBusca = new System.Windows.Forms.ToolStripLabel();
             this.txtBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnPrimeiro = new System.Windows.Forms.ToolStripButton();
-            this.btnAnterior = new System.Windows.Forms.ToolStripButton();
-            this.btnProximo = new System.Windows.Forms.ToolStripButton();
-            this.btnUltimo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnRelatorio = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnTodos = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -84,17 +82,13 @@
             this.tsbCancelar,
             this.tsbExcluir,
             this.toolStripSeparator1,
-            this.lblBuscaId,
+            this.lblBusca,
             this.txtBuscar,
             this.btnBuscar,
             this.toolStripSeparator2,
-            this.btnPrimeiro,
-            this.btnAnterior,
-            this.btnProximo,
-            this.btnUltimo,
+            this.btnTodos,
             this.toolStripSeparator3,
-            this.btnRelatorio,
-            this.toolStripButton1});
+            this.btnRelatorio});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 27);
@@ -150,11 +144,11 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
-            // lblBuscaId
+            // lblBusca
             // 
-            this.lblBuscaId.Name = "lblBuscaId";
-            this.lblBuscaId.Size = new System.Drawing.Size(99, 24);
-            this.lblBuscaId.Text = "Buscar por Id:";
+            this.lblBusca.Name = "lblBusca";
+            this.lblBusca.Size = new System.Drawing.Size(124, 24);
+            this.lblBusca.Text = "Buscar por nome:";
             // 
             // txtBuscar
             // 
@@ -171,50 +165,12 @@
             this.btnBuscar.Size = new System.Drawing.Size(29, 24);
             this.btnBuscar.Text = "toolStripButton1";
             this.btnBuscar.ToolTipText = "Buscar Cliente";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // btnPrimeiro
-            // 
-            this.btnPrimeiro.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnPrimeiro.Image = ((System.Drawing.Image)(resources.GetObject("btnPrimeiro.Image")));
-            this.btnPrimeiro.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPrimeiro.Name = "btnPrimeiro";
-            this.btnPrimeiro.Size = new System.Drawing.Size(29, 24);
-            this.btnPrimeiro.Text = "toolStripButton1";
-            this.btnPrimeiro.ToolTipText = "Primeiro Registro";
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
-            this.btnAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(29, 24);
-            this.btnAnterior.Text = "Registro Anterior";
-            // 
-            // btnProximo
-            // 
-            this.btnProximo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnProximo.Image = ((System.Drawing.Image)(resources.GetObject("btnProximo.Image")));
-            this.btnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(29, 24);
-            this.btnProximo.Text = "toolStripButton1";
-            this.btnProximo.ToolTipText = "Próximo Registro";
-            // 
-            // btnUltimo
-            // 
-            this.btnUltimo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnUltimo.Image = ((System.Drawing.Image)(resources.GetObject("btnUltimo.Image")));
-            this.btnUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnUltimo.Name = "btnUltimo";
-            this.btnUltimo.Size = new System.Drawing.Size(29, 24);
-            this.btnUltimo.Text = "toolStripButton1";
-            this.btnUltimo.ToolTipText = "Último Registro";
             // 
             // toolStripSeparator3
             // 
@@ -231,15 +187,6 @@
             this.btnRelatorio.Text = "toolStripButton1";
             this.btnRelatorio.ToolTipText = "Gerar Relatório";
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // dataGridView1
             // 
@@ -269,11 +216,44 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Nome";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(673, 190);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "TOTAL: ";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(728, 190);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(14, 16);
+            this.lblTotal.TabIndex = 32;
+            this.lblTotal.Text = "0";
+            // 
+            // btnTodos
+            // 
+            this.btnTodos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnTodos.Image")));
+            this.btnTodos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(29, 24);
+            this.btnTodos.Text = "Listar todos";
+            this.btnTodos.ToolTipText = "Listar todos";
+            this.btnTodos.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmAcesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dataGridView1);
@@ -300,19 +280,17 @@
         private System.Windows.Forms.ToolStripButton tsbCancelar;
         private System.Windows.Forms.ToolStripButton tsbExcluir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripLabel lblBuscaId;
+        private System.Windows.Forms.ToolStripLabel lblBusca;
         private System.Windows.Forms.ToolStripTextBox txtBuscar;
         private System.Windows.Forms.ToolStripButton btnBuscar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton btnPrimeiro;
-        private System.Windows.Forms.ToolStripButton btnAnterior;
-        private System.Windows.Forms.ToolStripButton btnProximo;
-        private System.Windows.Forms.ToolStripButton btnUltimo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btnRelatorio;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.ToolStripButton btnTodos;
     }
 }

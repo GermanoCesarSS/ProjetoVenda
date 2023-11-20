@@ -1,4 +1,5 @@
-﻿using Projeto_Venda_2023.controller;
+﻿using Projeto_Venda_2023.conexao;
+using Projeto_Venda_2023.controller;
 using Projeto_Venda_2023.model;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,10 @@ namespace Projeto_Venda_2023.view
 {
     public partial class frmAcesso : Form
     {
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataAdapter da;
+
         DataTable acessos;
         bool novo = false;
         //funções
@@ -60,7 +65,7 @@ namespace Projeto_Venda_2023.view
             }
             carregarTabela();
             txtNome.Enabled = false;
-            txtNome.Text = "";
+            txtNome.Clear();
             txtId.Text = "0";
             tsbSalvar.Enabled = false;
             tsbCancelar.Enabled = false;
@@ -83,7 +88,7 @@ namespace Projeto_Venda_2023.view
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
             txtNome.Enabled = false;
-            txtNome.Text = "";
+            txtNome.Clear();
             txtId.Text = "0";
             tsbSalvar.Enabled = false;
             tsbCancelar.Enabled = false;
@@ -98,7 +103,7 @@ namespace Projeto_Venda_2023.view
             cc.apagaDados(int.Parse(txtId.Text));
             carregarTabela();
             txtNome.Enabled = false;
-            txtNome.Text = "";
+            txtNome.Clear();
             txtId.Text = "0";
             tsbSalvar.Enabled = false;
             tsbCancelar.Enabled = false;
@@ -128,6 +133,67 @@ namespace Projeto_Venda_2023.view
         {
             frmRelatorios frm = new frmRelatorios(acessos);
             frm.ShowDialog();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string sqlBuscarId = "select * from acesso where nome LIKE @nome order by nome";
+            ConectaBanco cb = new ConectaBanco();
+            con = cb.conectaSqlServer();
+            cmd = new SqlCommand(sqlBuscarId, con);
+
+            //Passando parâmetros para a sentença SQL
+            cmd.Parameters.AddWithValue("@nome", txtBuscar.Text + "%");
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataReader tabacesso;
+            con.Open();
+
+            //*******carregando datagrid ***************************************8
+            //cria um dataadapter
+            da = new SqlDataAdapter(cmd);
+            //cria um objeto datatable
+            acessos = new DataTable();
+            //preenche o datatable via dataadapter
+            da.Fill(acessos);
+            //atribui o datatable ao datagridview para exibir o resultado
+            dataGridView1.DataSource = acessos;
+            //*******************fim do carregamento do datagrid
+            try
+            {
+                tabacesso = cmd.ExecuteReader();
+                if (tabacesso.Read())
+                {
+                    txtId.Text = tabacesso["Cod"].ToString();
+                    txtNome.Text = tabacesso["Nome"].ToString();
+
+
+                    //ativar controle dos botões
+                    tsbNovo.Enabled = false;
+                    tsbSalvar.Enabled = true;
+                    tsbCancelar.Enabled = true;
+                    tsbExcluir.Enabled = true;
+
+                    txtNome.Enabled = true;
+
+                    txtNome.Focus();
+                    novo = false;
+                }
+                else
+                {
+                    MessageBox.Show("acesso não Encontrado!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao Buscar!!!");
+            }
+
+            finally
+            {
+                con.Close();
+            }
+            txtBuscar.Text = string.Empty;
         }
     }
 }
