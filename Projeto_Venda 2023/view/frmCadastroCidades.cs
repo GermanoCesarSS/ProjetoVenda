@@ -31,9 +31,9 @@ namespace Projeto_Venda_2023.view
         {
             C_Cidade cc = new C_Cidade();
             DataTable aux = new DataTable();
-            aux = cc.buscarTodos();
-            cidades = aux;
-            dataGridView1.DataSource = aux;
+            cidades = cc.buscarTodos();
+            
+            dataGridView1.DataSource = cidades;
         }
         public void carregaUf()
         {
@@ -156,7 +156,7 @@ namespace Projeto_Venda_2023.view
         {
             try
             {
-                string sqlBuscar = "SELECT cidade.CODCIDADE AS Codigo, cidade.NOMECIDADE AS Nome, UF.SIGLA AS Sigla" +
+                string sqlBuscar = "SELECT cidade.CODCIDADE AS Codcidade, cidade.NOMECIDADE AS Nomecidade, UF.SIGLA AS Sigla" +
                                     " FROM cidade" +
                                     " INNER JOIN UF ON cidade.coduf_fk = UF.CODUF" +
                                     " WHERE cidade.nomecidade LIKE @nome" +
@@ -172,9 +172,11 @@ namespace Projeto_Venda_2023.view
                 //cria um dataadapter
                 da = new SqlDataAdapter(cmd);
                 //cria um objeto datatable
-                cidades = new DataTable();
+               cidades = new DataTable();
                 //preenche o datatable via dataadapter
                 da.Fill(cidades);
+
+               
                 //atribui o datatable ao datagridview para exibir o resultado
                 dataGridView1.DataSource = cidades;
                 //*******************fim do carregamento do datagrid
@@ -183,8 +185,8 @@ namespace Projeto_Venda_2023.view
 
                 if (tabcidade.Read())
                 {
-                    txtId.Text = tabcidade["Codigo"].ToString();
-                    txtNome.Text = tabcidade["Nome"].ToString();
+                    txtId.Text = tabcidade["Codcidade"].ToString();
+                    txtNome.Text = tabcidade["Nomecidade"].ToString();
                     comboBox1.Text = tabcidade["Sigla"].ToString();
 
                     // Ativar controle dos botões
@@ -216,6 +218,8 @@ namespace Projeto_Venda_2023.view
 
         private void btnRelatorio_Click(object sender, EventArgs e)
         {
+            //DataTable rlt = cidades;
+            //FrmPrincipal frm = new FrmPrincipal(rlt);
             rltCadastroCidade frm = new rltCadastroCidade(cidades);
             frm.ShowDialog();
         }

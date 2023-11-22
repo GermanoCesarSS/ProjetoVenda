@@ -26,9 +26,14 @@ namespace Projeto_Venda_2023.view
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(new
                 Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", dt));
-            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", dt));
+            //this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", dt));
 
             this.reportViewer1.RefreshReport();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

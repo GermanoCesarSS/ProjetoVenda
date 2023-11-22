@@ -24,7 +24,7 @@ namespace Projeto_Venda_2023.controller
         string sqlApagar = "delete from cidade where codcidade = @Cod";
         string sqlInsere = "insert into cidade(nomecidade, coduf_fk) values (@Nome, @Coduf)";
         string sqlEditar = "update cidade set nomecidade = @Nome, coduf_fk = @Coduf where codcidade = @Cod";
-        string sqlTodos = "select c.codcidade as Código, c.nomecidade as Cidade," +
+        string sqlTodos = "select c.codcidade as Codcidade, c.nomecidade as Nomecidade," +
                           " u.sigla as Sigla from cidade c, " +
                           "uf u where c.coduf_fk = u.coduf";
 
@@ -45,7 +45,7 @@ namespace Projeto_Venda_2023.controller
                 if (i > 0)
                 {
                     MessageBox.Show("Cidade deletada com Sucesso!!!\n" +
-                        "Código: " + cod);
+                        "Cod: " + cod);
                 }
             }
             catch (Exception ex)

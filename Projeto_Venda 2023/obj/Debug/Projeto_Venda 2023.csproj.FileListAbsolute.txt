@@ -89,3 +89,4 @@ C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Proj
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmCadastroCidades.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmSexo.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmBairro.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmCliente.resources

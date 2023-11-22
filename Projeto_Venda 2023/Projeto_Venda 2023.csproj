@@ -85,6 +85,7 @@
     <Compile Include="model\Acesso.cs" />
     <Compile Include="model\Bairro.cs" />
     <Compile Include="model\Cep.cs" />
+    <Compile Include="model\CidadeR.cs" />
     <Compile Include="model\Cidade.cs" />
     <Compile Include="model\Funcao.cs" />
     <Compile Include="model\Loja.cs" />
@@ -180,6 +181,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Acesso.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Cidade.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.model.CidadeR.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Uf.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmAcesso.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmCadastroCidades.datasource" />

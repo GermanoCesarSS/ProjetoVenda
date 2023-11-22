@@ -20,6 +20,11 @@ namespace Projeto_Venda_2023
             InitializeComponent();
             
         }
+        public FrmPrincipal(DataTable dt)
+        {
+            dataGridView1.DataSource = dt;
+
+        }
 
         private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -48,6 +53,11 @@ namespace Projeto_Venda_2023
         {
             frmBairro frm = new frmBairro();
             frm.ShowDialog();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

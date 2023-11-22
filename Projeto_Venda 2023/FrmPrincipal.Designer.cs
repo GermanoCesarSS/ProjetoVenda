@@ -37,7 +37,9 @@
             this.cidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sEXOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bAIRROToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -88,44 +90,57 @@
             // aCESSOToolStripMenuItem
             // 
             this.aCESSOToolStripMenuItem.Name = "aCESSOToolStripMenuItem";
-            this.aCESSOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aCESSOToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.aCESSOToolStripMenuItem.Text = "ACESSO";
             this.aCESSOToolStripMenuItem.Click += new System.EventHandler(this.aCESSOToolStripMenuItem_Click);
             // 
             // cidadesToolStripMenuItem
             // 
             this.cidadesToolStripMenuItem.Name = "cidadesToolStripMenuItem";
-            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.cidadesToolStripMenuItem.Text = "CIDADE";
             this.cidadesToolStripMenuItem.Click += new System.EventHandler(this.cidadesToolStripMenuItem_Click);
             // 
             // sEXOToolStripMenuItem
             // 
             this.sEXOToolStripMenuItem.Name = "sEXOToolStripMenuItem";
-            this.sEXOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sEXOToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.sEXOToolStripMenuItem.Text = "SEXO";
             this.sEXOToolStripMenuItem.Click += new System.EventHandler(this.sEXOToolStripMenuItem_Click);
             // 
             // bAIRROToolStripMenuItem
             // 
             this.bAIRROToolStripMenuItem.Name = "bAIRROToolStripMenuItem";
-            this.bAIRROToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bAIRROToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.bAIRROToolStripMenuItem.Text = "BAIRRO";
             this.bAIRROToolStripMenuItem.Click += new System.EventHandler(this.bAIRROToolStripMenuItem_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 247);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(705, 295);
+            this.dataGridView1.TabIndex = 3;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 554);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +156,7 @@
         private System.Windows.Forms.ToolStripMenuItem aCESSOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sEXOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bAIRROToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
