@@ -70,9 +70,14 @@
     <Compile Include="controller\C_Bairro.cs" />
     <Compile Include="controller\C_Cep.cs" />
     <Compile Include="controller\C_Cidade.cs" />
+    <Compile Include="controller\C_Funcao.cs" />
     <Compile Include="controller\C_Loja.cs" />
+    <Compile Include="controller\C_Marca.cs" />
+    <Compile Include="controller\C_Operadora.cs" />
     <Compile Include="controller\C_Rua.cs" />
     <Compile Include="controller\C_Sexo.cs" />
+    <Compile Include="controller\C_Situacao.cs" />
+    <Compile Include="controller\C_Tipo.cs" />
     <Compile Include="controller\C_Trabalho.cs" />
     <Compile Include="controller\C_Uf.cs" />
     <Compile Include="controller\I_CRUD.cs" />
@@ -85,7 +90,6 @@
     <Compile Include="model\Acesso.cs" />
     <Compile Include="model\Bairro.cs" />
     <Compile Include="model\Cep.cs" />
-    <Compile Include="model\CidadeR.cs" />
     <Compile Include="model\Cidade.cs" />
     <Compile Include="model\Funcao.cs" />
     <Compile Include="model\Loja.cs" />
@@ -118,17 +122,77 @@
     <Compile Include="view\frmCadastroCidades.Designer.cs">
       <DependentUpon>frmCadastroCidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\frmCep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmCep.Designer.cs">
+      <DependentUpon>frmCep.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\frmFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmFuncao.Designer.cs">
+      <DependentUpon>frmFuncao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmLoja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmLoja.Designer.cs">
+      <DependentUpon>frmLoja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmMarca.Designer.cs">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmOperadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmOperadora.Designer.cs">
+      <DependentUpon>frmOperadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmRua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmRua.Designer.cs">
+      <DependentUpon>frmRua.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmSexo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\frmSexo.Designer.cs">
       <DependentUpon>frmSexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmSituacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmSituacao.Designer.cs">
+      <DependentUpon>frmSituacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmTipo.Designer.cs">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmTrabalho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmTrabalho.Designer.cs">
+      <DependentUpon>frmTrabalho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmUf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmUf.Designer.cs">
+      <DependentUpon>frmUf.cs</DependentUpon>
     </Compile>
     <Compile Include="view\rltAcesso.cs">
       <SubType>Form</SubType>
@@ -157,6 +221,7 @@
     </Compile>
     <EmbeddedResource Include="relatorios\relatorioAcesso.rdlc" />
     <EmbeddedResource Include="relatorios\relatorioCidade.rdlc" />
+    <EmbeddedResource Include="relatorios\Report1.rdlc" />
     <EmbeddedResource Include="view\frmAcesso.resx">
       <DependentUpon>frmAcesso.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,11 +231,41 @@
     <EmbeddedResource Include="view\frmCadastroCidades.resx">
       <DependentUpon>frmCadastroCidades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\frmCep.resx">
+      <DependentUpon>frmCep.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\frmFuncao.resx">
+      <DependentUpon>frmFuncao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmLoja.resx">
+      <DependentUpon>frmLoja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmMarca.resx">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmOperadora.resx">
+      <DependentUpon>frmOperadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmRua.resx">
+      <DependentUpon>frmRua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\frmSexo.resx">
       <DependentUpon>frmSexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmSituacao.resx">
+      <DependentUpon>frmSituacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmTipo.resx">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmTrabalho.resx">
+      <DependentUpon>frmTrabalho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmUf.resx">
+      <DependentUpon>frmUf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\rltAcesso.resx">
       <DependentUpon>rltAcesso.cs</DependentUpon>
@@ -181,7 +276,6 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Acesso.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Cidade.datasource" />
-    <None Include="Properties\DataSources\Projeto_Venda_2023.model.CidadeR.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Uf.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmAcesso.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmCadastroCidades.datasource" />

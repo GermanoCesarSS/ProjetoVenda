@@ -9,8 +9,8 @@ namespace Projeto_Venda_2023.model
 {
     internal class Uf
     {
-        public int Coduf {  get; set; }
-        public String Nomeuf { get; set; }
+        public int Cod {  get; set; }
+        public String Nome { get; set; }
         
         public String Sigla {  get; set; }
         public Uf() { }

@@ -20,11 +20,6 @@ namespace Projeto_Venda_2023
             InitializeComponent();
             
         }
-        public FrmPrincipal(DataTable dt)
-        {
-            dataGridView1.DataSource = dt;
-
-        }
 
         private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -55,9 +50,64 @@ namespace Projeto_Venda_2023
             frm.ShowDialog();
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        private void cEPToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmCep frm = new frmCep();
+            frm.ShowDialog();
+        }
 
+        private void rUAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRua frmRua = new frmRua();
+            frmRua.ShowDialog();    
+        }
+
+        private void tRABALHOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTrabalho frmTrabalho = new frmTrabalho();
+            frmTrabalho.ShowDialog();
+        }
+
+        private void lOJAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoja frmLoja = new frmLoja();
+            frmLoja.ShowDialog();
+        }
+
+        private void uFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUf frm = new frmUf();    
+            frm.ShowDialog();
+        }
+
+        private void tIPOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTipo frm = new frmTipo();
+            frm.ShowDialog();
+        }
+
+        private void mARCAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMarca frm = new frmMarca();
+            frm.ShowDialog();
+        }
+
+        private void oPERADORAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOperadora frm = new frmOperadora();
+            frm.ShowDialog();
+        }
+
+        private void sITUAÇÃOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSituacao frm = new frmSituacao();
+            frm.ShowDialog();
+        }
+
+        private void fUNÇÃOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFuncao frm = new frmFuncao();
+            frm.ShowDialog();
         }
     }
 }

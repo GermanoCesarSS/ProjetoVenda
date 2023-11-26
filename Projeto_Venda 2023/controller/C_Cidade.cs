@@ -21,12 +21,12 @@ namespace Projeto_Venda_2023.controller
         SqlDataAdapter da;
         DataTable cidades;
 
-        string sqlApagar = "delete from cidade where codcidade = @Cod";
-        string sqlInsere = "insert into cidade(nomecidade, coduf_fk) values (@Nome, @Coduf)";
-        string sqlEditar = "update cidade set nomecidade = @Nome, coduf_fk = @Coduf where codcidade = @Cod";
-        string sqlTodos = "select c.codcidade as Codcidade, c.nomecidade as Nomecidade," +
-                          " u.sigla as Sigla from cidade c, " +
-                          "uf u where c.coduf_fk = u.coduf";
+        string sqlApagar = "delete from cidade where cod = @Cod";
+        string sqlInsere = "insert into cidade(nome, coduf_fk) values (@Nome, @Cod)";
+        string sqlEditar = "update cidade set nome = @Nome, coduf_fk = @Cod where cod = @Cod";
+        string sqlTodos = "select c.cod, c.nome," +
+                          " u.sigla as uf from cidade c, " +
+                          "uf u where c.coduf_fk = u.cod";
 
         public void apagaDados(int cod)
         {
@@ -45,7 +45,7 @@ namespace Projeto_Venda_2023.controller
                 if (i > 0)
                 {
                     MessageBox.Show("Cidade deletada com Sucesso!!!\n" +
-                        "Cod: " + cod);
+                        "Código: " + cod);
                 }
             }
             catch (Exception ex)
@@ -66,8 +66,8 @@ namespace Projeto_Venda_2023.controller
             con = cb.conectaSqlServer();
             cmd = new SqlCommand(sqlInsere, con);
 
-            cmd.Parameters.AddWithValue("@Nome", cidade.Nomecidade);
-            cmd.Parameters.AddWithValue("@Coduf", cidade.Uf.Coduf);
+            cmd.Parameters.AddWithValue("@Nome", cidade.Nome);
+            cmd.Parameters.AddWithValue("@Cod", cidade.Uf.Cod);
             cmd.CommandType = CommandType.Text;
             con.Open();
             try
@@ -94,9 +94,9 @@ namespace Projeto_Venda_2023.controller
             ConectaBanco cb = new ConectaBanco();
             con = cb.conectaSqlServer();
             cmd = new SqlCommand(sqlEditar, con);
-            cmd.Parameters.AddWithValue("@Cod", cidade.Codcidade);
-            cmd.Parameters.AddWithValue("@Nome", cidade.Nomecidade);
-            cmd.Parameters.AddWithValue("@Coduf",cidade.Uf.Coduf);
+            cmd.Parameters.AddWithValue("@Cod", cidade.Cod);
+            cmd.Parameters.AddWithValue("@Nome", cidade.Nome);
+            cmd.Parameters.AddWithValue("@Cod",cidade.Uf.Cod);
             cmd.CommandType = CommandType.Text;
             con.Open();
             try
@@ -160,8 +160,8 @@ namespace Projeto_Venda_2023.controller
                 {
                     Cidade aux = new Cidade();
 
-                    aux.Codcidade = Int32.Parse(tabCidade["codcidade"].ToString());
-                    aux.Nomecidade = tabCidade["nomecidade"].ToString();
+                    aux.Cod = Int32.Parse(tabCidade["cod"].ToString());
+                    aux.Nome = tabCidade["nome"].ToString();
 
                     lista_cidade.Add(aux);
                 }

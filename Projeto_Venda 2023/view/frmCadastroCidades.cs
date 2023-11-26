@@ -30,9 +30,7 @@ namespace Projeto_Venda_2023.view
         public void carregarTabela()
         {
             C_Cidade cc = new C_Cidade();
-            DataTable aux = new DataTable();
             cidades = cc.buscarTodos();
-            
             dataGridView1.DataSource = cidades;
         }
         public void carregaUf()
@@ -42,7 +40,7 @@ namespace Projeto_Venda_2023.view
             aux = cs.carregaDados();
             comboBox1.DataSource = aux;
             comboBox1.DisplayMember = "sigla";
-            comboBox1.ValueMember = "coduf";
+            comboBox1.ValueMember = "cod";
         }
         //Construtor da Classe frmCadastroCliente
         public frmCadastroCidades()
@@ -60,7 +58,7 @@ namespace Projeto_Venda_2023.view
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicao = comboBox1.SelectedIndex;
-            label3.Text = aux[posicao].Coduf.ToString();
+            label3.Text = aux[posicao].Cod.ToString();
         }
         private void tsbNovo_Click(object sender, EventArgs e)
         {
@@ -80,7 +78,7 @@ namespace Projeto_Venda_2023.view
             {
                 Cidade cidade = new Cidade
                 {
-                    Nomecidade = txtNome.Text,
+                    Nome = txtNome.Text,
                     Uf = aux[posicao]
                 };
                 C_Cidade cc = new C_Cidade();
@@ -90,8 +88,8 @@ namespace Projeto_Venda_2023.view
             {
                 Cidade cidade = new Cidade
                 {
-                    Codcidade = Int32.Parse(txtId.Text),
-                    Nomecidade = txtNome.Text,
+                    Cod = Int32.Parse(txtId.Text),
+                    Nome = txtNome.Text,
                     Uf = aux[posicao]
                 };
                 C_Cidade c_cidade = new C_Cidade();
@@ -156,11 +154,10 @@ namespace Projeto_Venda_2023.view
         {
             try
             {
-                string sqlBuscar = "SELECT cidade.CODCIDADE AS Codcidade, cidade.NOMECIDADE AS Nomecidade, UF.SIGLA AS Sigla" +
+                string sqlBuscar = "SELECT cidade.COD AS Cod, cidade.NOME AS Nome, UF.SIGLA AS Uf" +
                                     " FROM cidade" +
-                                    " INNER JOIN UF ON cidade.coduf_fk = UF.CODUF" +
-                                    " WHERE cidade.nomecidade LIKE @nome" +
-                                    " ORDER BY cidade.nomecidade;";
+                                    " INNER JOIN UF ON cidade.coduf_fk = UF.COD" +
+                                    " WHERE cidade.nome LIKE @nome";
                 ConectaBanco cb = new ConectaBanco();
                 con = cb.conectaSqlServer();
                 cmd = new SqlCommand(sqlBuscar, con);
@@ -185,9 +182,9 @@ namespace Projeto_Venda_2023.view
 
                 if (tabcidade.Read())
                 {
-                    txtId.Text = tabcidade["Codcidade"].ToString();
-                    txtNome.Text = tabcidade["Nomecidade"].ToString();
-                    comboBox1.Text = tabcidade["Sigla"].ToString();
+                    txtId.Text = tabcidade["Cod"].ToString();
+                    txtNome.Text = tabcidade["Nome"].ToString();
+                    comboBox1.Text = tabcidade["Uf"].ToString();
 
                     // Ativar controle dos botões
                     tsbNovo.Enabled = false;
