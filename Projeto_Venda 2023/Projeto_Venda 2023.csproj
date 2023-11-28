@@ -70,6 +70,7 @@
     <Compile Include="controller\C_Bairro.cs" />
     <Compile Include="controller\C_Cep.cs" />
     <Compile Include="controller\C_Cidade.cs" />
+    <Compile Include="controller\C_Cliente.cs" />
     <Compile Include="controller\C_Funcao.cs" />
     <Compile Include="controller\C_Loja.cs" />
     <Compile Include="controller\C_Marca.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="model\Bairro.cs" />
     <Compile Include="model\Cep.cs" />
     <Compile Include="model\Cidade.cs" />
+    <Compile Include="model\Cliente.cs" />
     <Compile Include="model\Funcao.cs" />
     <Compile Include="model\Loja.cs" />
     <Compile Include="model\Marca.cs" />
@@ -206,6 +208,12 @@
     <Compile Include="view\rltCadastroCidade.Designer.cs">
       <DependentUpon>rltCadastroCidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\rltCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\rltCliente.Designer.cs">
+      <DependentUpon>rltCliente.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +229,7 @@
     </Compile>
     <EmbeddedResource Include="relatorios\relatorioAcesso.rdlc" />
     <EmbeddedResource Include="relatorios\relatorioCidade.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorioCliente.rdlc" />
     <EmbeddedResource Include="relatorios\Report1.rdlc" />
     <EmbeddedResource Include="view\frmAcesso.resx">
       <DependentUpon>frmAcesso.cs</DependentUpon>
@@ -273,9 +282,13 @@
     <EmbeddedResource Include="view\rltCadastroCidade.resx">
       <DependentUpon>rltCadastroCidade.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\rltCliente.resx">
+      <DependentUpon>rltCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Acesso.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Cidade.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.model.Cliente.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.model.Uf.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmAcesso.datasource" />
     <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmCadastroCidades.datasource" />

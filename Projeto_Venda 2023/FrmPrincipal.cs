@@ -109,5 +109,11 @@ namespace Projeto_Venda_2023
             frmFuncao frm = new frmFuncao();
             frm.ShowDialog();
         }
+
+        private void cLIENTEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente frm = new frmCliente();
+            frm.ShowDialog();
+        }
     }
 }

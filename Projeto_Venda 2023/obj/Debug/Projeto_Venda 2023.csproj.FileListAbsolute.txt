@@ -100,3 +100,4 @@ C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Proj
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmOperadora.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmSituacao.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmTipo.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.rltCliente.resources

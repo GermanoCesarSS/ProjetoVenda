@@ -1,0 +1,81 @@
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Projeto_Venda 2023.exe.config
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Projeto_Venda 2023.exe
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Projeto_Venda 2023.pdb
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Microsoft.ReportViewer.Design.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\EnvDTE.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\stdole.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda 2023.csproj.AssemblyReference.cache
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.FrmPrincipal.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.Properties.Resources.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmAcesso.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmBairro.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmCadastroCidades.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmCep.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmCliente.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmFuncao.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmLoja.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmMarca.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmOperadora.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmRua.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmSexo.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmSituacao.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmTipo.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmTrabalho.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.frmUf.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.rltAcesso.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.rltCadastroCidade.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda_2023.view.rltCliente.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda 2023.csproj.GenerateResource.cache
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda 2023.csproj.CoreCompileInputs.cache
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda 2023.csproj.CopyComplete
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda 2023.exe
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Release\Projeto_Venda 2023.pdb

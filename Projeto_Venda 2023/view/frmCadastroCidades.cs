@@ -58,7 +58,6 @@ namespace Projeto_Venda_2023.view
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicao = comboBox1.SelectedIndex;
-            label3.Text = aux[posicao].Cod.ToString();
         }
         private void tsbNovo_Click(object sender, EventArgs e)
         {

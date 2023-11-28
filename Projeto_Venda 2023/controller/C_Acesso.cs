@@ -51,15 +51,16 @@ namespace Projeto_Venda_2023.controller
         public void insereDados(object obj)
         {
             Acesso acesso = new Acesso();
-            acesso = (Acesso)obj;
+            try
+            {
+                acesso = (Acesso)obj;
             ConectaBanco cb = new ConectaBanco();
             con = cb.conectaSqlServer();
             cmd = new SqlCommand(sqlInsere, con);
             cmd.Parameters.AddWithValue("@Nome", acesso.Nome);
             cmd.CommandType = CommandType.Text;
             con.Open();
-            try
-            {
+            
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0) MessageBox.Show("Registro incluído com sucesso");
             }

@@ -47,6 +47,8 @@
             this.oPERADORAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sITUAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fUNÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastros2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cLIENTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +57,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
-            this.cadastrosToolStripMenuItem});
+            this.cadastrosToolStripMenuItem,
+            this.cadastros2ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -204,6 +207,21 @@
             this.fUNÇÃOToolStripMenuItem.Text = "FUNÇÃO";
             this.fUNÇÃOToolStripMenuItem.Click += new System.EventHandler(this.fUNÇÃOToolStripMenuItem_Click);
             // 
+            // cadastros2ToolStripMenuItem
+            // 
+            this.cadastros2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cLIENTEToolStripMenuItem});
+            this.cadastros2ToolStripMenuItem.Name = "cadastros2ToolStripMenuItem";
+            this.cadastros2ToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.cadastros2ToolStripMenuItem.Text = "Cadastros 2";
+            // 
+            // cLIENTEToolStripMenuItem
+            // 
+            this.cLIENTEToolStripMenuItem.Name = "cLIENTEToolStripMenuItem";
+            this.cLIENTEToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cLIENTEToolStripMenuItem.Text = "CLIENTE";
+            this.cLIENTEToolStripMenuItem.Click += new System.EventHandler(this.cLIENTEToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,7 +229,7 @@
             this.ClientSize = new System.Drawing.Size(729, 554);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -242,6 +260,8 @@
         private System.Windows.Forms.ToolStripMenuItem oPERADORAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sITUAÇÃOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fUNÇÃOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastros2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cLIENTEToolStripMenuItem;
     }
 }
 
