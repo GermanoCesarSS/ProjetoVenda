@@ -122,7 +122,7 @@
             this.btnRelatorio});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(774, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(774, 31);
             this.toolStrip1.TabIndex = 35;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -132,7 +132,7 @@
             this.tsbNovo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNovo.Image")));
             this.tsbNovo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNovo.Name = "tsbNovo";
-            this.tsbNovo.Size = new System.Drawing.Size(29, 24);
+            this.tsbNovo.Size = new System.Drawing.Size(29, 28);
             this.tsbNovo.Text = "toolStripButton1";
             this.tsbNovo.ToolTipText = "Adicionar Novo Cliente";
             this.tsbNovo.Click += new System.EventHandler(this.tsbNovo_Click);
@@ -328,16 +328,16 @@
             this.cbCidade.FormattingEnabled = true;
             this.cbCidade.Location = new System.Drawing.Point(12, 230);
             this.cbCidade.Name = "cbCidade";
-            this.cbCidade.Size = new System.Drawing.Size(136, 24);
+            this.cbCidade.Size = new System.Drawing.Size(168, 24);
             this.cbCidade.TabIndex = 7;
             this.cbCidade.SelectedIndexChanged += new System.EventHandler(this.cbCidade_SelectedIndexChanged);
             // 
             // cbTrabalho
             // 
             this.cbTrabalho.FormattingEnabled = true;
-            this.cbTrabalho.Location = new System.Drawing.Point(154, 230);
+            this.cbTrabalho.Location = new System.Drawing.Point(186, 230);
             this.cbTrabalho.Name = "cbTrabalho";
-            this.cbTrabalho.Size = new System.Drawing.Size(124, 24);
+            this.cbTrabalho.Size = new System.Drawing.Size(186, 24);
             this.cbTrabalho.TabIndex = 8;
             this.cbTrabalho.SelectedIndexChanged += new System.EventHandler(this.cbTrabalho_SelectedIndexChanged);
             // 
@@ -394,7 +394,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(154, 211);
+            this.label10.Location = new System.Drawing.Point(186, 211);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 16);
@@ -404,7 +404,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(288, 210);
+            this.label11.Location = new System.Drawing.Point(376, 211);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 16);
@@ -414,11 +414,11 @@
             // txtSalario
             // 
             this.txtSalario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSalario.Location = new System.Drawing.Point(288, 230);
+            this.txtSalario.Location = new System.Drawing.Point(379, 230);
             this.txtSalario.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalario.MaxLength = 50;
             this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(244, 22);
+            this.txtSalario.Size = new System.Drawing.Size(153, 22);
             this.txtSalario.TabIndex = 9;
             // 
             // label12
@@ -438,7 +438,7 @@
             this.txtNumerocasa.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumerocasa.MaxLength = 50;
             this.txtNumerocasa.Name = "txtNumerocasa";
-            this.txtNumerocasa.Size = new System.Drawing.Size(210, 22);
+            this.txtNumerocasa.Size = new System.Drawing.Size(107, 22);
             this.txtNumerocasa.TabIndex = 10;
             // 
             // frmCliente

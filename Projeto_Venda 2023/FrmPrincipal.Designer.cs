@@ -96,18 +96,18 @@
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aCESSOToolStripMenuItem,
-            this.sEXOToolStripMenuItem,
             this.bAIRROToolStripMenuItem,
             this.cEPToolStripMenuItem,
-            this.rUAToolStripMenuItem,
-            this.tRABALHOToolStripMenuItem,
+            this.fUNÇÃOToolStripMenuItem,
             this.lOJAToolStripMenuItem,
-            this.uFToolStripMenuItem,
-            this.tIPOToolStripMenuItem,
             this.mARCAToolStripMenuItem,
             this.oPERADORAToolStripMenuItem,
+            this.rUAToolStripMenuItem,
+            this.sEXOToolStripMenuItem,
             this.sITUAÇÃOToolStripMenuItem,
-            this.fUNÇÃOToolStripMenuItem});
+            this.tIPOToolStripMenuItem,
+            this.tRABALHOToolStripMenuItem,
+            this.uFToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -115,91 +115,91 @@
             // aCESSOToolStripMenuItem
             // 
             this.aCESSOToolStripMenuItem.Name = "aCESSOToolStripMenuItem";
-            this.aCESSOToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.aCESSOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aCESSOToolStripMenuItem.Text = "ACESSO";
             this.aCESSOToolStripMenuItem.Click += new System.EventHandler(this.aCESSOToolStripMenuItem_Click);
             // 
             // sEXOToolStripMenuItem
             // 
             this.sEXOToolStripMenuItem.Name = "sEXOToolStripMenuItem";
-            this.sEXOToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.sEXOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sEXOToolStripMenuItem.Text = "SEXO";
             this.sEXOToolStripMenuItem.Click += new System.EventHandler(this.sEXOToolStripMenuItem_Click);
             // 
             // bAIRROToolStripMenuItem
             // 
             this.bAIRROToolStripMenuItem.Name = "bAIRROToolStripMenuItem";
-            this.bAIRROToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.bAIRROToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.bAIRROToolStripMenuItem.Text = "BAIRRO";
             this.bAIRROToolStripMenuItem.Click += new System.EventHandler(this.bAIRROToolStripMenuItem_Click);
             // 
             // cEPToolStripMenuItem
             // 
             this.cEPToolStripMenuItem.Name = "cEPToolStripMenuItem";
-            this.cEPToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.cEPToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cEPToolStripMenuItem.Text = "CEP";
             this.cEPToolStripMenuItem.Click += new System.EventHandler(this.cEPToolStripMenuItem_Click);
             // 
             // rUAToolStripMenuItem
             // 
             this.rUAToolStripMenuItem.Name = "rUAToolStripMenuItem";
-            this.rUAToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.rUAToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.rUAToolStripMenuItem.Text = "RUA";
             this.rUAToolStripMenuItem.Click += new System.EventHandler(this.rUAToolStripMenuItem_Click);
             // 
             // tRABALHOToolStripMenuItem
             // 
             this.tRABALHOToolStripMenuItem.Name = "tRABALHOToolStripMenuItem";
-            this.tRABALHOToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.tRABALHOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tRABALHOToolStripMenuItem.Text = "TRABALHO";
             this.tRABALHOToolStripMenuItem.Click += new System.EventHandler(this.tRABALHOToolStripMenuItem_Click);
             // 
             // lOJAToolStripMenuItem
             // 
             this.lOJAToolStripMenuItem.Name = "lOJAToolStripMenuItem";
-            this.lOJAToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.lOJAToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.lOJAToolStripMenuItem.Text = "LOJA";
             this.lOJAToolStripMenuItem.Click += new System.EventHandler(this.lOJAToolStripMenuItem_Click);
             // 
             // uFToolStripMenuItem
             // 
             this.uFToolStripMenuItem.Name = "uFToolStripMenuItem";
-            this.uFToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.uFToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.uFToolStripMenuItem.Text = "UF";
             this.uFToolStripMenuItem.Click += new System.EventHandler(this.uFToolStripMenuItem_Click);
             // 
             // tIPOToolStripMenuItem
             // 
             this.tIPOToolStripMenuItem.Name = "tIPOToolStripMenuItem";
-            this.tIPOToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.tIPOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tIPOToolStripMenuItem.Text = "TIPO";
             this.tIPOToolStripMenuItem.Click += new System.EventHandler(this.tIPOToolStripMenuItem_Click);
             // 
             // mARCAToolStripMenuItem
             // 
             this.mARCAToolStripMenuItem.Name = "mARCAToolStripMenuItem";
-            this.mARCAToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.mARCAToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.mARCAToolStripMenuItem.Text = "MARCA";
             this.mARCAToolStripMenuItem.Click += new System.EventHandler(this.mARCAToolStripMenuItem_Click);
             // 
             // oPERADORAToolStripMenuItem
             // 
             this.oPERADORAToolStripMenuItem.Name = "oPERADORAToolStripMenuItem";
-            this.oPERADORAToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.oPERADORAToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.oPERADORAToolStripMenuItem.Text = "OPERADORA";
             this.oPERADORAToolStripMenuItem.Click += new System.EventHandler(this.oPERADORAToolStripMenuItem_Click);
             // 
             // sITUAÇÃOToolStripMenuItem
             // 
             this.sITUAÇÃOToolStripMenuItem.Name = "sITUAÇÃOToolStripMenuItem";
-            this.sITUAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.sITUAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sITUAÇÃOToolStripMenuItem.Text = "SITUAÇÃO";
             this.sITUAÇÃOToolStripMenuItem.Click += new System.EventHandler(this.sITUAÇÃOToolStripMenuItem_Click);
             // 
             // fUNÇÃOToolStripMenuItem
             // 
             this.fUNÇÃOToolStripMenuItem.Name = "fUNÇÃOToolStripMenuItem";
-            this.fUNÇÃOToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.fUNÇÃOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fUNÇÃOToolStripMenuItem.Text = "FUNÇÃO";
             this.fUNÇÃOToolStripMenuItem.Click += new System.EventHandler(this.fUNÇÃOToolStripMenuItem_Click);
             // 

@@ -93,6 +93,12 @@ namespace Projeto_Venda_2023.view
             cbTrabalho.DisplayMember = "nome";
             cbTrabalho.ValueMember = "cod";
         }
+        public void carregarTabela()
+        {
+            C_Cliente cc = new C_Cliente();
+            clientes = cc.buscarTodos();
+            dataGridView1.DataSource = clientes;
+        }
         public byte[] ConverteImageEmByte(System.Drawing.Image obj)
         {
                 MemoryStream ms = new MemoryStream();
@@ -114,11 +120,60 @@ namespace Projeto_Venda_2023.view
 
         }
         //Carrega as informações no DatagridView1 com os dados das clientes
-        public void carregarTabela()
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            C_Cliente cc = new C_Cliente();
-            clientes = cc.buscarTodos();
-            dataGridView1.DataSource = clientes;
+            int index = e.RowIndex;// get the Row Index
+            if (index > -1)
+            {
+                try
+                {
+                    pictureBox1.Image = null;
+                    DataGridViewRow selectedRow = dataGridView1.Rows[index];
+                    txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                    txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                    byte[] imagemBytes = dataGridView1.CurrentRow.Cells[2].Value as byte[];
+                    if (imagemBytes != null)
+                    {
+                        using (MemoryStream stream = new MemoryStream(imagemBytes))
+                        {
+                            pictureBox1.Image = Image.FromStream(stream);
+                        }
+                    }
+                    txtDatanasc.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                    cbSexo.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                    cbRua.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                    cbBairro.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                    cbCep.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                    cbCidade.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                    txtSalario.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                    cbTrabalho.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+                    txtNumerocasa.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+
+                    tsbNovo.Enabled = false;
+                    tsbCancelar.Enabled = true;
+                    tsbSalvar.Enabled = true;
+                    tsbExcluir.Enabled = true;
+                    txtNome.Enabled = true;
+                    txtDatanasc.Enabled = true;
+                    cbSexo.Enabled = true;
+                    cbRua.Enabled = true;
+                    cbBairro.Enabled = true;
+                    cbCep.Enabled = true;
+                    cbCidade.Enabled = true;
+                    cbTrabalho.Enabled = true;
+                    btnFoto.Enabled = true;
+                    txtSalario.Enabled = true;
+                    txtNumerocasa.Enabled = true;
+
+                    novo = false;
+                    novaFoto = false;
+                    txtNome.Focus();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao listar!!!\n\nErro: {ex.Message}\n\nStackTrace: {ex.StackTrace}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
         //Construtor da Classe frmCliente
         public frmCliente()
@@ -148,6 +203,7 @@ namespace Projeto_Venda_2023.view
             tsbCancelar.Enabled = false;
             tsbExcluir.Enabled = false;
         }
+        //Botões
         private void tsbNovo_Click(object sender, EventArgs e)
         {
             txtNome.Enabled = true; 
@@ -318,60 +374,6 @@ namespace Projeto_Venda_2023.view
             tsbExcluir.Enabled = false;
             tsbNovo.Enabled = true;
         }
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;// get the Row Index
-            if (index > -1)
-            {
-                try
-                {
-                    pictureBox1.Image = null;
-                    DataGridViewRow selectedRow = dataGridView1.Rows[index];
-                        txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                        txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                        byte[] imagemBytes = dataGridView1.CurrentRow.Cells[2].Value as byte[];
-                        if (imagemBytes != null)
-                        {
-                            using (MemoryStream stream = new MemoryStream(imagemBytes))
-                            {
-                                pictureBox1.Image = Image.FromStream(stream);
-                            }
-                        }
-                        txtDatanasc.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                        cbSexo.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                        cbRua.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                        cbBairro.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                        cbCep.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                        cbCidade.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-                        txtSalario.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-                        cbTrabalho.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-                        txtNumerocasa.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
-
-                        tsbNovo.Enabled = false;
-                        tsbCancelar.Enabled = true;
-                        tsbSalvar.Enabled = true;
-                        tsbExcluir.Enabled = true;
-                        txtNome.Enabled = true;
-                        txtDatanasc.Enabled = true;
-                        cbSexo.Enabled = true;
-                        cbRua.Enabled = true;
-                        cbBairro.Enabled = true;
-                        cbCep.Enabled = true;
-                        cbCidade.Enabled = true;
-                        cbTrabalho.Enabled = true;
-                        btnFoto.Enabled = true;
-                        txtSalario.Enabled = true;
-                        txtNumerocasa.Enabled = true;
-
-                        novo = false;
-                        novaFoto = false;
-                        txtNome.Focus();
-                }catch(Exception ex)
-                {
-                        MessageBox.Show($"Erro ao listar!!!\n\nErro: {ex.Message}\n\nStackTrace: {ex.StackTrace}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -471,12 +473,6 @@ WHERE c.nome LIKE @Nome;";
             }
             txtBuscar.Text = string.Empty;
         }
-
-        private void btnRelatorio_Click(object sender, EventArgs e)
-        {
-            rltCliente frm = new rltCliente(clientes);
-            frm.ShowDialog();
-        }
         private void btnFoto_Click(object sender, EventArgs e)
         {
             String imagLoction = "";
@@ -498,32 +494,33 @@ WHERE c.nome LIKE @Nome;";
                 MessageBox.Show("ERRO", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //Relatorio
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            rltCliente frm = new rltCliente(clientes);
+            frm.ShowDialog();
+        }
         //ComboBox
         private void cbSexo_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicaoSexo = cbSexo.SelectedIndex;
         }
-
         private void cbRua_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicaoRua = cbRua.SelectedIndex;
         }
-
         private void cbBairro_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicaoBairro = cbBairro.SelectedIndex;
         }
-
         private void cbCep_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicaoCep = cbCep.SelectedIndex;
         }
-
         private void cbCidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicaoCidade = cbCidade.SelectedIndex;
         }
-
         private void cbTrabalho_SelectedIndexChanged(object sender, EventArgs e)
         {
             posicaoTrabalho = cbTrabalho.SelectedIndex;

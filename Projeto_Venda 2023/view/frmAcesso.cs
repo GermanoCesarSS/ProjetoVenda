@@ -26,10 +26,8 @@ namespace Projeto_Venda_2023.view
         public void carregarTabela()
         {
             C_Acesso cc = new C_Acesso();
-            DataTable aux = new DataTable();
-            aux = cc.buscarTodos();
-            acessos = aux;
-            dataGridView1.DataSource = aux;
+            acessos = cc.buscarTodos();
+            dataGridView1.DataSource = acessos;
         }
         //
         public frmAcesso()

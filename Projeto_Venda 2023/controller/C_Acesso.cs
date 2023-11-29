@@ -21,7 +21,7 @@ namespace Projeto_Venda_2023.controller
         string sqlApagar = "delete from acesso where cod = @Cod";
         string sqlInsere = "insert into acesso (nome) values (@Nome)";
         string sqlEditar = "update acesso set nome = @Nome where cod = @Cod";
-        string sqlTodos = "select * from acesso order by nome";
+        string sqlTodos = "select * from acesso order by cod";
         
         public void apagaDados(int cod)
         {
