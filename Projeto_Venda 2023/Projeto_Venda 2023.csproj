@@ -72,12 +72,14 @@
     <Compile Include="controller\C_Cidade.cs" />
     <Compile Include="controller\C_Cliente.cs" />
     <Compile Include="controller\C_Funcao.cs" />
+    <Compile Include="controller\C_ItensTelefoneCliente.cs" />
     <Compile Include="controller\C_Loja.cs" />
     <Compile Include="controller\C_Marca.cs" />
     <Compile Include="controller\C_Operadora.cs" />
     <Compile Include="controller\C_Rua.cs" />
     <Compile Include="controller\C_Sexo.cs" />
     <Compile Include="controller\C_Situacao.cs" />
+    <Compile Include="controller\C_Telefone.cs" />
     <Compile Include="controller\C_Tipo.cs" />
     <Compile Include="controller\C_Trabalho.cs" />
     <Compile Include="controller\C_Uf.cs" />
@@ -94,12 +96,14 @@
     <Compile Include="model\Cidade.cs" />
     <Compile Include="model\Cliente.cs" />
     <Compile Include="model\Funcao.cs" />
+    <Compile Include="model\ItensTelefoneCliente.cs" />
     <Compile Include="model\Loja.cs" />
     <Compile Include="model\Marca.cs" />
     <Compile Include="model\Operadora.cs" />
     <Compile Include="model\Rua.cs" />
     <Compile Include="model\Sexo.cs" />
     <Compile Include="model\Situacao.cs" />
+    <Compile Include="model\Telefone.cs" />
     <Compile Include="model\Tipo.cs" />
     <Compile Include="model\Trabalho.cs" />
     <Compile Include="model\Uf.cs" />
@@ -142,6 +146,12 @@
     <Compile Include="view\frmFuncao.Designer.cs">
       <DependentUpon>frmFuncao.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\frmItensTelefoneCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmItensTelefoneCliente.Designer.cs">
+      <DependentUpon>frmItensTelefoneCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmLoja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +187,12 @@
     </Compile>
     <Compile Include="view\frmSituacao.Designer.cs">
       <DependentUpon>frmSituacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmTelefone.Designer.cs">
+      <DependentUpon>frmTelefone.cs</DependentUpon>
     </Compile>
     <Compile Include="view\frmTipo.cs">
       <SubType>Form</SubType>
@@ -249,6 +265,9 @@
     <EmbeddedResource Include="view\frmFuncao.resx">
       <DependentUpon>frmFuncao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\frmItensTelefoneCliente.resx">
+      <DependentUpon>frmItensTelefoneCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\frmLoja.resx">
       <DependentUpon>frmLoja.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmSituacao.resx">
       <DependentUpon>frmSituacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmTelefone.resx">
+      <DependentUpon>frmTelefone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmTipo.resx">
       <DependentUpon>frmTipo.cs</DependentUpon>

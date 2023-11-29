@@ -143,7 +143,7 @@
             this.tsbSalvar.Image = ((System.Drawing.Image)(resources.GetObject("tsbSalvar.Image")));
             this.tsbSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSalvar.Name = "tsbSalvar";
-            this.tsbSalvar.Size = new System.Drawing.Size(29, 28);
+            this.tsbSalvar.Size = new System.Drawing.Size(29, 24);
             this.tsbSalvar.Text = "toolStripButton1";
             this.tsbSalvar.ToolTipText = "Salvar Cliente";
             this.tsbSalvar.Click += new System.EventHandler(this.tsbSalvar_Click);
@@ -154,7 +154,7 @@
             this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
             this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(29, 28);
+            this.tsbCancelar.Size = new System.Drawing.Size(29, 24);
             this.tsbCancelar.Text = "toolStripButton1";
             this.tsbCancelar.ToolTipText = "Cancelar";
             this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
@@ -165,7 +165,7 @@
             this.tsbExcluir.Image = ((System.Drawing.Image)(resources.GetObject("tsbExcluir.Image")));
             this.tsbExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExcluir.Name = "tsbExcluir";
-            this.tsbExcluir.Size = new System.Drawing.Size(29, 28);
+            this.tsbExcluir.Size = new System.Drawing.Size(29, 24);
             this.tsbExcluir.Text = "toolStripButton1";
             this.tsbExcluir.ToolTipText = "Excluir Registro";
             this.tsbExcluir.Click += new System.EventHandler(this.tsbExcluir_Click);
@@ -173,19 +173,19 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // lblBuscaId
             // 
             this.lblBuscaId.Name = "lblBuscaId";
-            this.lblBuscaId.Size = new System.Drawing.Size(124, 28);
+            this.lblBuscaId.Size = new System.Drawing.Size(124, 24);
             this.lblBuscaId.Text = "Buscar por nome:";
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(239, 31);
+            this.txtBuscar.Size = new System.Drawing.Size(239, 27);
             // 
             // btnBuscar
             // 
@@ -193,7 +193,7 @@
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(29, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(29, 24);
             this.btnBuscar.Text = "toolStripButton1";
             this.btnBuscar.ToolTipText = "Buscar Cliente";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -201,12 +201,12 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // btnRelatorio
             // 
@@ -214,7 +214,7 @@
             this.btnRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorio.Image")));
             this.btnRelatorio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(29, 28);
+            this.btnRelatorio.Size = new System.Drawing.Size(29, 24);
             this.btnRelatorio.Text = "toolStripButton1";
             this.btnRelatorio.ToolTipText = "Gerar Relatório";
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);

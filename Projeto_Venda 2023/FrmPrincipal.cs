@@ -20,13 +20,6 @@ namespace Projeto_Venda_2023
             InitializeComponent();
             
         }
-
-        private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCadastroCidades cadcidade = new frmCadastroCidades();
-            cadcidade.ShowDialog();
-        }
-
         private void aCESSOToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAcesso frm = new frmAcesso();
@@ -113,6 +106,24 @@ namespace Projeto_Venda_2023
         private void cLIENTEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCliente frm = new frmCliente();
+            frm.ShowDialog();
+        }
+
+        private void cidadesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmCadastroCidades cadcidade = new frmCadastroCidades();
+            cadcidade.ShowDialog();
+        }
+
+        private void tELEFONEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTelefone frm = new frmTelefone();
+            frm.ShowDialog();
+        }
+
+        private void tELEFONEECLIENTEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmItensTelefoneCliente frm = new frmItensTelefoneCliente();
             frm.ShowDialog();
         }
     }

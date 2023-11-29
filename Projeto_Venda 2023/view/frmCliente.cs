@@ -16,7 +16,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
 namespace Projeto_Venda_2023.view
 {
     public partial class frmCliente : Form
@@ -26,6 +25,7 @@ namespace Projeto_Venda_2023.view
         SqlDataAdapter da;
         DataTable clientes;
         bool novo = false;
+        bool novaFoto = false;
         List<Sexo> auxSexo = new List<Sexo>();
         List<Rua> auxRua = new List<Rua>();
         List<Bairro> auxBairro = new List<Bairro>();
@@ -98,9 +98,13 @@ namespace Projeto_Venda_2023.view
                 MemoryStream ms = new MemoryStream();
             try
             {
-                obj.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] img = ms.ToArray();
-                return img;
+                if (obj != null)
+                {
+                    obj.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    byte[] img = ms.ToArray();
+                    return img;
+                }
+                else { return null; }
             }
             catch (Exception ex)
             {
@@ -194,22 +198,45 @@ namespace Projeto_Venda_2023.view
                 }
                 else
                 {
-                    Cliente cliente = new Cliente
+                    if (novaFoto)
                     {
-                        Cod = Int32.Parse(txtId.Text),
-                        Foto = ConverteImageEmByte(pictureBox1.Image),
-                        Datanasc = datanasc,
-                        Sexo = auxSexo[posicaoSexo],
-                        Rua = auxRua[posicaoRua],
-                        Bairro = auxBairro[posicaoBairro],
-                        Cep = auxCep[posicaoCep],
-                        Cidade = auxCidade[posicaoCidade],
-                        Trabalho = auxTrabalho[posicaoTrabalho],
-                        Salario = Double.Parse(txtSalario.Text),
-                        Numerocasa = txtNumerocasa.Text
-                    };
-                    C_Cliente c_cliente = new C_Cliente();
-                    c_cliente.editaDados(cliente);
+                        Cliente cliente = new Cliente
+                        {
+                            Cod = Int32.Parse(txtId.Text),
+                            Nome = txtNome.Text,
+                            Foto = ConverteImageEmByte(pictureBox1.Image),
+                            Datanasc = datanasc,
+                            Sexo = auxSexo[posicaoSexo],
+                            Rua = auxRua[posicaoRua],
+                            Bairro = auxBairro[posicaoBairro],
+                            Cep = auxCep[posicaoCep],
+                            Cidade = auxCidade[posicaoCidade],
+                            Trabalho = auxTrabalho[posicaoTrabalho],
+                            Salario = Double.Parse(txtSalario.Text),
+                            Numerocasa = txtNumerocasa.Text
+                        };
+                        C_Cliente c_cliente = new C_Cliente();
+                        c_cliente.editaDados(cliente);
+                    }
+                    else
+                    {
+                        Cliente cliente = new Cliente
+                        {
+                            Cod = Int32.Parse(txtId.Text),
+                            Nome = txtNome.Text,
+                            Datanasc = datanasc,
+                            Sexo = auxSexo[posicaoSexo],
+                            Rua = auxRua[posicaoRua],
+                            Bairro = auxBairro[posicaoBairro],
+                            Cep = auxCep[posicaoCep],
+                            Cidade = auxCidade[posicaoCidade],
+                            Trabalho = auxTrabalho[posicaoTrabalho],
+                            Salario = Double.Parse(txtSalario.Text),
+                            Numerocasa = txtNumerocasa.Text
+                        };
+                        C_Cliente c_cliente = new C_Cliente();
+                        c_cliente.editaDados2(cliente);
+                    }
                 }
                 carregarTabela();
                 txtNome.Enabled = false;
@@ -233,7 +260,7 @@ namespace Projeto_Venda_2023.view
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao tentar salvar!!!\n\nErro: {ex.Message}\n\nStackTrace: {ex.StackTrace}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erro ao tentar salvar!!!\n\nErro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void tsbExcluir_Click(object sender, EventArgs e)
@@ -284,6 +311,7 @@ namespace Projeto_Venda_2023.view
             txtId.Clear();
             txtDatanasc.Clear();
             txtNumerocasa.Clear();
+            txtSalario.Clear();
             pictureBox1.Image = null;
             tsbSalvar.Enabled = false;
             tsbCancelar.Enabled = false;
@@ -336,6 +364,7 @@ namespace Projeto_Venda_2023.view
                         txtNumerocasa.Enabled = true;
 
                         novo = false;
+                        novaFoto = false;
                         txtNome.Focus();
                 }catch(Exception ex)
                 {
@@ -460,6 +489,7 @@ WHERE c.nome LIKE @Nome;";
                 {
                     imagLoction = dialog.FileName;
                     pictureBox1.ImageLocation = imagLoction;
+                    novaFoto = true;
                 }
 
             }
