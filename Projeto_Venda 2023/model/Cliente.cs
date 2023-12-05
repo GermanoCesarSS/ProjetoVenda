@@ -24,7 +24,5 @@ namespace Projeto_Venda_2023.model
         public Trabalho Trabalho { get; set;}
         
         public String Numerocasa { get; set; }  
-
-
     }
 }

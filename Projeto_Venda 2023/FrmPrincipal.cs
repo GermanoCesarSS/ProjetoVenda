@@ -126,5 +126,17 @@ namespace Projeto_Venda_2023
             frmItensTelefoneCliente frm = new frmItensTelefoneCliente();
             frm.ShowDialog();
         }
+
+        private void fUNCIONARIOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFuncionario frm = new frmFuncionario();
+            frm.ShowDialog();
+        }
+
+        private void lOGINSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogins frm = new frmLogins();
+            frm.ShowDialog();
+        }
     }
 }

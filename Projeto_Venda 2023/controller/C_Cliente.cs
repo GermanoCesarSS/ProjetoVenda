@@ -15,8 +15,6 @@ using System.Windows.Forms;
 
 namespace Projeto_Venda_2023.controller
 {
-
-
     internal class C_Cliente : I_CRUD
     {
         SqlConnection con;

@@ -425,7 +425,6 @@ WHERE c.nome LIKE @Nome;";
                 {
                     txtId.Text = tabcliente["Cod"].ToString();
                     txtNome.Text = tabcliente["Nome"].ToString();
-                    this.cbSexo.Text = tabcliente["Sexo"].ToString();
                     txtDatanasc.Text = tabcliente["Datanasc"].ToString();
                     cbSexo.Text = tabcliente["Sexo"].ToString();
                     cbRua.Text = tabcliente["Rua"].ToString();

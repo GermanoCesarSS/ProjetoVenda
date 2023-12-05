@@ -72,7 +72,9 @@
     <Compile Include="controller\C_Cidade.cs" />
     <Compile Include="controller\C_Cliente.cs" />
     <Compile Include="controller\C_Funcao.cs" />
+    <Compile Include="controller\C_Funcionario.cs" />
     <Compile Include="controller\C_ItensTelefoneCliente.cs" />
+    <Compile Include="controller\C_Logins.cs" />
     <Compile Include="controller\C_Loja.cs" />
     <Compile Include="controller\C_Marca.cs" />
     <Compile Include="controller\C_Operadora.cs" />
@@ -95,8 +97,11 @@
     <Compile Include="model\Cep.cs" />
     <Compile Include="model\Cidade.cs" />
     <Compile Include="model\Cliente.cs" />
+    <Compile Include="model\ControleLoginsSistema.cs" />
     <Compile Include="model\Funcao.cs" />
+    <Compile Include="model\Funcionario.cs" />
     <Compile Include="model\ItensTelefoneCliente.cs" />
+    <Compile Include="model\Logins.cs" />
     <Compile Include="model\Loja.cs" />
     <Compile Include="model\Marca.cs" />
     <Compile Include="model\Operadora.cs" />
@@ -146,11 +151,23 @@
     <Compile Include="view\frmFuncao.Designer.cs">
       <DependentUpon>frmFuncao.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\frmItensTelefoneCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\frmItensTelefoneCliente.Designer.cs">
       <DependentUpon>frmItensTelefoneCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmLogins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmLogins.Designer.cs">
+      <DependentUpon>frmLogins.cs</DependentUpon>
     </Compile>
     <Compile Include="view\frmLoja.cs">
       <SubType>Form</SubType>
@@ -265,8 +282,14 @@
     <EmbeddedResource Include="view\frmFuncao.resx">
       <DependentUpon>frmFuncao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\frmItensTelefoneCliente.resx">
       <DependentUpon>frmItensTelefoneCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmLogins.resx">
+      <DependentUpon>frmLogins.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmLoja.resx">
       <DependentUpon>frmLoja.cs</DependentUpon>

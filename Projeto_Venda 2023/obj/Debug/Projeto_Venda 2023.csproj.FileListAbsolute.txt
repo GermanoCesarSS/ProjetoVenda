@@ -103,3 +103,5 @@ C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Proj
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.rltCliente.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmTelefone.resources
 C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmItensTelefoneCliente.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmFuncionario.resources
+C:\Users\Germano\Documents\GitHub\ProjetoVenda\Projeto_Venda 2023\obj\Debug\Projeto_Venda_2023.view.frmLogins.resources
